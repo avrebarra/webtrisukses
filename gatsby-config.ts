@@ -38,6 +38,13 @@ const config: GatsbyConfig = {
       },
       __key: "pages",
     },
+    {
+      resolve: "@chakra-ui/gatsby-plugin",
+      options: {
+        resetCSS: true,
+        portalZIndex: undefined,
+      },
+    },
   ],
 };
 
