@@ -3,10 +3,6 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { ChakraProvider } from "@chakra-ui/react";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
 import { SectionNavigation } from "../section/index/1_navigation";
 import { SectionCarousel } from "../section/index/2_carousel";
 import { SectionKeunggulan } from "../section/index/3_keunggulan";
