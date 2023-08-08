@@ -36,7 +36,7 @@ const CTA = () => {
                 }}
               >
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
-                  <Image src="/assets/Free.png" width={145} height={165} alt="Free Plan" />
+                  <Image src="/webtrisukses/assets/Free.png" width={145} height={165} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Bangun Rumah</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
@@ -56,7 +56,7 @@ const CTA = () => {
                 }}
               >
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
-                  <Image src="/assets/Free.png" width={145} height={165} alt="Free Plan" />
+                  <Image src="/webtrisukses/assets/Free.png" width={145} height={165} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Renovasi Rumah</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
@@ -76,7 +76,7 @@ const CTA = () => {
                 }}
               >
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
-                  <Image src="/assets/Free.png" width={145} height={165} alt="Free Plan" />
+                  <Image src="/webtrisukses/assets/Free.png" width={145} height={165} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Building Maintenance</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
@@ -96,7 +96,7 @@ const CTA = () => {
                 }}
               >
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
-                  <Image src="/assets/Free.png" width={145} height={165} alt="Free Plan" />
+                  <Image src="/webtrisukses/assets/Free.png" width={145} height={165} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Interior</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
