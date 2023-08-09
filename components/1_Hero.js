@@ -24,7 +24,7 @@ const Hero = ({}) => {
           </div>
           <div className="flex w-full">
             <motion.div className="h-full w-full" variants={scrollAnimation}>
-              <Image src="/webtrisukses/assets/Illustration1.png" alt="VPN Illustrasi" quality={100} width={612} height={383} layout="responsive" />
+              <Image src="/assets/Illustration1.png" alt="VPN Illustrasi" quality={100} width={612} height={383} layout="responsive" />
             </motion.div>
           </div>
         </motion.div>

@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import Image from "next/image";
-import Testimoni from "./3_Testimoni";
+import Gallery from "./3_Gallery";
 import ButtonPrimary from "./misc/ButtonPrimary";
 import ButtonOutline from "./misc/ButtonOutline.";
 import { motion } from "framer-motion";
@@ -36,7 +36,7 @@ const CTA = () => {
                 }}
               >
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
-                  <Image src="/webtrisukses/assets/Free.png" width={145} height={165} alt="Free Plan" />
+                  <Image src="/assets/Free.png" width={145} height={165} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Bangun Rumah</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
@@ -56,7 +56,7 @@ const CTA = () => {
                 }}
               >
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
-                  <Image src="/webtrisukses/assets/Free.png" width={145} height={165} alt="Free Plan" />
+                  <Image src="/assets/Free.png" width={145} height={165} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Renovasi Rumah</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
@@ -76,7 +76,7 @@ const CTA = () => {
                 }}
               >
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
-                  <Image src="/webtrisukses/assets/Free.png" width={145} height={165} alt="Free Plan" />
+                  <Image src="/assets/Free.png" width={145} height={165} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Building Maintenance</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
@@ -96,7 +96,7 @@ const CTA = () => {
                 }}
               >
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
-                  <Image src="/webtrisukses/assets/Free.png" width={145} height={165} alt="Free Plan" />
+                  <Image src="/assets/Free.png" width={145} height={165} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Interior</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
@@ -121,7 +121,7 @@ const CTA = () => {
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper className="w-full flex flex-col py-12">
             <motion.div variants={scrollAnimation}>
-              <Testimoni />
+              <Gallery />
             </motion.div>
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper className="relative w-full mt-16">
