@@ -3,11 +3,11 @@ import { useRouter } from "next/router";
 
 // Default value for some meta data
 const defaultMeta = {
-  title: "KaryaRenovasi",
-  siteName: "KaryaRenovasi",
+  title: "TriSuksesKarya",
+  siteName: "TriSuksesKarya",
   description: "Wujudkan Hunian Impian Anda Bersama Kami!",
   // change base url of your web (without '/' at the end)
-  url: "karyarenovasi.com",
+  url: "TriSuksesKarya.com",
   type: "website",
   robots: "follow, index",
   // change with url of your image (recommended dimension = 1.91:1)
