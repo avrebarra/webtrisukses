@@ -27,7 +27,7 @@ const CTA = () => {
             <ScrollAnimationWrapper className="flex justify-center">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center shadow-md rounded-xl py-2 px-3 lg:px-6 xl:px-10"
+                className="flex flex-col justify-center items-center shadow-md rounded-xl py-2 w-full m-2 px-3 lg:px-6 xl:px-10"
                 whileHover={{
                   scale: 1.1,
                   transition: {
@@ -47,7 +47,7 @@ const CTA = () => {
             <ScrollAnimationWrapper className="flex justify-center">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center shadow-md rounded-xl py-2 px-3 lg:px-6 xl:px-10"
+                className="flex flex-col justify-center items-center shadow-md rounded-xl py-2 w-full m-2 px-3 lg:px-6 xl:px-10"
                 whileHover={{
                   scale: 1.1,
                   transition: {
@@ -67,7 +67,7 @@ const CTA = () => {
             <ScrollAnimationWrapper className="flex justify-center">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center shadow-md rounded-xl py-2 px-3 lg:px-6 xl:px-10"
+                className="flex flex-col justify-center items-center shadow-md rounded-xl py-2 w-full m-2 px-3 lg:px-6 xl:px-10"
                 whileHover={{
                   scale: 1.1,
                   transition: {
@@ -87,7 +87,7 @@ const CTA = () => {
             <ScrollAnimationWrapper className="flex justify-center">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center shadow-md rounded-xl py-2 px-3 lg:px-6 xl:px-10"
+                className="flex flex-col justify-center items-center shadow-md rounded-xl py-2 w-full m-2 px-3 lg:px-6 xl:px-10"
                 whileHover={{
                   scale: 1.1,
                   transition: {

@@ -46,6 +46,7 @@ const SEOHead = (props) => {
   return (
     <Head>
       <title>{meta.title}</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       <meta name="robots" content={meta.robots} />
       <meta content={meta.description} name="description" />
       <meta property="og:url" content={`${meta.url}${router.asPath}`} />

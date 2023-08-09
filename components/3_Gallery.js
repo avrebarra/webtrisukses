@@ -45,7 +45,7 @@ const Gallery = ({
         </a>
       );
     },
-    dotsClass: "slick-dots w-max absolute mt-20  ",
+    // dotsClass: "slick-dots w-max absolute mt-20  ",
     infinite: true,
     speed: 500,
     slidesToShow: 3,
