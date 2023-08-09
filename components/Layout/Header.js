@@ -18,7 +18,7 @@ const Header = () => {
       <header className={"fixed top-0 w-full  z-30 bg-white-500 transition-all " + (scrollActive ? " shadow-md pt-0" : " pt-4")}>
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
           <div className="col-start-1 col-end-2 flex items-center">
-            <Image src="/assets/logo.png" quality={100} width={150} height={50} />
+            <Image src="/webtrisukses/assets/logo.png" quality={100} width={150} height={50} />
           </div>
           <ul className="hidden lg:flex col-start-4 col-end-8 text-black-500  items-center">
             <LinkScroll
