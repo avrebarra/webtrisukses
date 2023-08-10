@@ -1,12 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "TriSuksesKarya",
-  "short_name": "TriSuksesKarya",
+  "name": "Trisukses Bangun Karya",
+  "short_name": "Trisukses Bangun Karya",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FFFFFF",
   "theme_color": "#F53838",
-  "description": "TriSuksesKarya Penyedia jasa bangun pembangunan renovasi bangunan murah Jawa Timur.",
+  "description": "Trisukses Bangun Karya Penyedia jasa bangun pembangunan renovasi bangunan murah Jawa Timur.",
   "icons": [
     {
       "src": "/favicon/android-icon-36x36.png",

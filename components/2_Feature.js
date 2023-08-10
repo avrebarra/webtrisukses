@@ -12,7 +12,7 @@ const Feature = () => {
         <ScrollAnimationWrapper>
           <motion.div className="flex flex-col justify-center ml-auto w-full lg:w-9/12" variants={scrollAnimation}>
             <h3 className="text-2xl lg:text-3xl font-medium leading-relaxed text-black-600">1. Harga Terjangkau</h3>
-            <p className="my-2 text-black-500">
+            <p className="my-2 text-slate-900">
               Kami memberikan harga yang bisa disesuaikan budget Anda. Dijamin tetap berkualitas di semua pilihan.
             </p>
           </motion.div>
@@ -20,7 +20,7 @@ const Feature = () => {
         <ScrollAnimationWrapper>
           <motion.div className="flex flex-col justify-center ml-auto w-full lg:w-9/12" variants={scrollAnimation}>
             <h3 className="text-2xl lg:text-3xl font-medium leading-relaxed text-black-600">2. Berpengalaman</h3>
-            <p className="my-2 text-black-500">
+            <p className="my-2 text-slate-900">
               Menggabungkan pengerjaan yang berkualitas, pengetahuan yang unggul, dan harga rendah untuk memberi Anda layanan yang tak tertandingi
               oleh pesaing kami.
             </p>
@@ -31,7 +31,7 @@ const Feature = () => {
         <ScrollAnimationWrapper>
           <motion.div className="flex flex-col justify-center ml-auto w-full lg:w-9/12" variants={scrollAnimation}>
             <h3 className="text-2xl lg:text-3xl font-medium leading-relaxed text-black-600">3. Material Terbaik</h3>
-            <p className="my-2 text-black-500">
+            <p className="my-2 text-slate-900">
               Memberikan mutu material yang terbaik, memiliki pengalaman personel dan sumber daya untuk membuat proyek berjalan lancar. Sehingga dapat
               kami pastikan pekerjaan selesai tepat waktu.
             </p>
@@ -40,7 +40,7 @@ const Feature = () => {
         <ScrollAnimationWrapper>
           <motion.div className="flex flex-col justify-center ml-auto w-full lg:w-9/12" variants={scrollAnimation}>
             <h3 className="text-2xl lg:text-3xl font-medium leading-relaxed text-black-600">4. Profesional</h3>
-            <p className="my-2 text-black-500">
+            <p className="my-2 text-slate-900">
               Manajemen bisnis kami diisi tenaga kerja profesional dan terarah dalam bekerja. Koordinasi sangat dibutuhkan dalam mengerjakan sebuah
               bangunan sehingga target bisa terpenuhi.
             </p>
@@ -51,7 +51,7 @@ const Feature = () => {
         <ScrollAnimationWrapper>
           <motion.div className="flex flex-col justify-center ml-auto w-full lg:w-9/12" variants={scrollAnimation}>
             <h3 className="text-2xl lg:text-3xl font-medium leading-relaxed text-black-600">5. Laporan Progress</h3>
-            <p className="my-2 text-black-500">
+            <p className="my-2 text-slate-900">
               Kami bekerja bersama melibatkan serangkaian langkah yang direncanakan dengan cermat, berpusat di sekitar jadwal yang kami ikuti dan
               komunikasi sehari-hari demi kelancaran pembangunan.
             </p>
@@ -60,7 +60,7 @@ const Feature = () => {
         <ScrollAnimationWrapper>
           <motion.div className="flex flex-col justify-center ml-auto w-full lg:w-9/12" variants={scrollAnimation}>
             <h3 className="text-2xl lg:text-3xl font-medium leading-relaxed text-black-600">6. Jaringan Kuat</h3>
-            <p className="my-2 text-black-500">
+            <p className="my-2 text-slate-900">
               Kami memiliki pengalaman personel dan sumber daya untuk membuat proyek berjalan lancar. Sehingga dapat kami pastikan pekerjaan selesai
               tepat waktu.
             </p>

@@ -11,7 +11,7 @@ const CTA = () => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
   return (
-    <div className="bg-gradient-to-b from-white-300 to-white-500 w-full py-14" id="pricing">
+    <div className="bg-gradient-to-b from-white-300 to-slate-100 w-full py-14" id="pricing">
       <div className="max-w-screen-xl  px-6 sm:px-8 lg:px-16 mx-auto flex flex-col w-full text-center justify-center">
         <div className="flex flex-col w-full">
           <ScrollAnimationWrapper>
@@ -36,7 +36,7 @@ const CTA = () => {
                 }}
               >
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
-                  <Image src="/webtrisukses/assets/service_building.png" width={145} height={165} alt="Free Plan" />
+                  <Image src="/assets/service_building.png" width={145} height={165} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Bangun Rumah</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
@@ -56,7 +56,7 @@ const CTA = () => {
                 }}
               >
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
-                  <Image src="/webtrisukses/assets/service_renovation.png" width={145} height={165} alt="Free Plan" />
+                  <Image src="/assets/service_renovation.png" width={145} height={165} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Renovasi Rumah</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
@@ -76,7 +76,7 @@ const CTA = () => {
                 }}
               >
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
-                  <Image src="/webtrisukses/assets/service_maintenance.png" width={145} height={165} alt="Free Plan" />
+                  <Image src="/assets/service_maintenance.png" width={145} height={165} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Building Maintenance</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
@@ -96,7 +96,7 @@ const CTA = () => {
                 }}
               >
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
-                  <Image src="/webtrisukses/assets/service_interior.png" width={145} height={165} alt="Free Plan" />
+                  <Image src="/assets/service_interior.png" width={145} height={165} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Interior</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
@@ -126,7 +126,7 @@ const CTA = () => {
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper className="relative w-full mt-16">
             <motion.div variants={scrollAnimation} custom={{ duration: 3 }}>
-              <div className="absolute rounded-xl  py-8 sm:py-14 px-6 sm:px-12 lg:px-16 w-full flex flex-col sm:flex-row justify-between items-center z-10 bg-white-500">
+              <div className="absolute rounded-xl  py-8 sm:py-14 px-6 sm:px-12 lg:px-16 w-full flex flex-col sm:flex-row justify-between items-center z-10 bg-slate-100">
                 <div className="flex flex-col text-left w-10/12 sm:w-7/12 lg:w-5/12 mb-6 sm:mb-0">
                   <h5 className="text-black-600 text-xl sm:text-2xl lg:text-3xl leading-relaxed font-medium">
                     Hubungi Kami <br /> & Wujudkan Mimpi Anda

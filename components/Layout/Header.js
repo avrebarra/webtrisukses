@@ -15,12 +15,12 @@ const Header = () => {
   }, []);
   return (
     <>
-      <header className={"fixed top-0 w-full  z-30 bg-white-500 transition-all " + (scrollActive ? " shadow-md pt-0" : " pt-4")}>
+      <header className={"fixed top-0 w-full  z-30 bg-slate-100 transition-all " + (scrollActive ? " shadow-md pt-0" : " pt-4")}>
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
           <div className="col-start-1 col-end-2 flex items-center">
-            <Image src="/webtrisukses/assets/logo.png" quality={100} width={150} height={50} />
+            <Image src="/assets/logo.png" quality={100} width={150} height={50} />
           </div>
-          <ul className="hidden lg:flex col-start-4 col-end-8 text-black-500  items-center">
+          <ul className="hidden lg:flex col-start-4 col-end-8 text-slate-900  items-center">
             <LinkScroll
               activeClass="active"
               to="about"
@@ -32,7 +32,7 @@ const Header = () => {
               }}
               className={
                 "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
-                (activeLink === "about" ? " text-green-500 animation-active " : " text-black-500 hover:text-green-500 a")
+                (activeLink === "about" ? " text-yellow-500 animation-active " : " text-slate-900 hover:text-yellow-500 a")
               }
             >
               Tentang Kami
@@ -48,7 +48,7 @@ const Header = () => {
               }}
               className={
                 "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
-                (activeLink === "feature" ? " text-green-500 animation-active " : " text-black-500 hover:text-green-500 ")
+                (activeLink === "feature" ? " text-yellow-500 animation-active " : " text-slate-900 hover:text-yellow-500 ")
               }
             >
               Keunggulan
@@ -64,7 +64,7 @@ const Header = () => {
               }}
               className={
                 "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
-                (activeLink === "pricing" ? " text-green-500 animation-active " : " text-black-500 hover:text-green-500 ")
+                (activeLink === "pricing" ? " text-yellow-500 animation-active " : " text-slate-900 hover:text-yellow-500 ")
               }
             >
               Layanan & Jasa
@@ -80,7 +80,7 @@ const Header = () => {
               }}
               className={
                 "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
-                (activeLink === "testimoni" ? " text-green-500 animation-active " : " text-black-500 hover:text-green-500 ")
+                (activeLink === "testimoni" ? " text-yellow-500 animation-active " : " text-slate-900 hover:text-yellow-500 ")
               }
             >
               Galeri
@@ -97,8 +97,8 @@ const Header = () => {
       {/* Mobile Navigation */}
 
       <nav className="fixed lg:hidden bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t ">
-        <div className="bg-white-500 sm:px-3">
-          <ul className="flex w-full justify-between items-center text-black-500">
+        <div className="bg-slate-100 sm:px-3">
+          <ul className="flex w-full justify-between items-center text-slate-900">
             <LinkScroll
               activeClass="active"
               to="about"
@@ -110,7 +110,7 @@ const Header = () => {
               }}
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
-                (activeLink === "about" ? "  border-green-500 text-green-500" : " border-transparent")
+                (activeLink === "about" ? "  border-yellow-500 text-yellow-500" : " border-transparent")
               }
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -129,7 +129,7 @@ const Header = () => {
               }}
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
-                (activeLink === "feature" ? "  border-green-500 text-green-500" : " border-transparent ")
+                (activeLink === "feature" ? "  border-yellow-500 text-yellow-500" : " border-transparent ")
               }
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -153,7 +153,7 @@ const Header = () => {
               }}
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
-                (activeLink === "pricing" ? "  border-green-500 text-green-500" : " border-transparent ")
+                (activeLink === "pricing" ? "  border-yellow-500 text-yellow-500" : " border-transparent ")
               }
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -177,7 +177,7 @@ const Header = () => {
               }}
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
-                (activeLink === "testimoni" ? "  border-green-500 text-green-500" : " border-transparent ")
+                (activeLink === "testimoni" ? "  border-yellow-500 text-yellow-500" : " border-transparent ")
               }
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
