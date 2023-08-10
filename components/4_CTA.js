@@ -27,7 +27,7 @@ const CTA = () => {
             <ScrollAnimationWrapper className="flex justify-center">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center shadow-md rounded-xl py-2 w-full m-2 px-3 lg:px-6 xl:px-10"
+                className="flex flex-col justify-center items-center shadow-md py-2 w-full m-2 px-3 lg:px-6 xl:px-10"
                 whileHover={{
                   scale: 1.1,
                   transition: {
@@ -35,8 +35,8 @@ const CTA = () => {
                   },
                 }}
               >
-                <div className="p-4 lg:p-0 mt-6 lg:mt-16">
-                  <Image src="/assets/service_building.png" width={145} height={165} alt="Free Plan" />
+                <div className="p-4 lg:p-0 mt-6">
+                  <Image src="/assets/service_building.jpg" width={150} height={150} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Bangun Rumah</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
@@ -47,7 +47,7 @@ const CTA = () => {
             <ScrollAnimationWrapper className="flex justify-center">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center shadow-md rounded-xl py-2 w-full m-2 px-3 lg:px-6 xl:px-10"
+                className="flex flex-col justify-center items-center shadow-md py-2 w-full m-2 px-3 lg:px-6 xl:px-10"
                 whileHover={{
                   scale: 1.1,
                   transition: {
@@ -55,8 +55,8 @@ const CTA = () => {
                   },
                 }}
               >
-                <div className="p-4 lg:p-0 mt-6 lg:mt-16">
-                  <Image src="/assets/service_renovation.png" width={145} height={165} alt="Free Plan" />
+                <div className="p-4 lg:p-0 mt-6">
+                  <Image src="/assets/service_renovation.jpg" width={150} height={150} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Renovasi Rumah</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
@@ -67,7 +67,7 @@ const CTA = () => {
             <ScrollAnimationWrapper className="flex justify-center">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center shadow-md rounded-xl py-2 w-full m-2 px-3 lg:px-6 xl:px-10"
+                className="flex flex-col justify-center items-center shadow-md py-2 w-full m-2 px-3 lg:px-6 xl:px-10"
                 whileHover={{
                   scale: 1.1,
                   transition: {
@@ -75,8 +75,8 @@ const CTA = () => {
                   },
                 }}
               >
-                <div className="p-4 lg:p-0 mt-6 lg:mt-16">
-                  <Image src="/assets/service_maintenance.png" width={145} height={165} alt="Free Plan" />
+                <div className="p-4 lg:p-0 mt-6">
+                  <Image src="/assets/service_maintenance.jpg" width={150} height={150} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Building Maintenance</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
@@ -87,7 +87,7 @@ const CTA = () => {
             <ScrollAnimationWrapper className="flex justify-center">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center shadow-md rounded-xl py-2 w-full m-2 px-3 lg:px-6 xl:px-10"
+                className="flex flex-col justify-center items-center shadow-md py-2 w-full m-2 px-3 lg:px-6 xl:px-10"
                 whileHover={{
                   scale: 1.1,
                   transition: {
@@ -95,8 +95,8 @@ const CTA = () => {
                   },
                 }}
               >
-                <div className="p-4 lg:p-0 mt-6 lg:mt-16">
-                  <Image src="/assets/service_interior.png" width={145} height={165} alt="Free Plan" />
+                <div className="p-4 lg:p-0 mt-6">
+                  <Image src="/assets/service_interior.jpg" width={150} height={150} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Interior</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
