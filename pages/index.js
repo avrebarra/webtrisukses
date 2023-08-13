@@ -1,6 +1,7 @@
 import Feature from "../components/2_Feature";
 import CTA from "../components/4_CTA";
 import Hero from "../components/1_Hero";
+import Workways from "../components/X_Workways";
 import Layout from "../components/Layout/Layout";
 import SEOHead from "../components/SeoHead";
 
@@ -11,6 +12,7 @@ export default function Home() {
       <Layout>
         <Hero />
         <Feature />
+        <Workways />
         <CTA />
       </Layout>
     </>

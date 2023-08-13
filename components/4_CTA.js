@@ -5,6 +5,7 @@ import ButtonPrimary from "./misc/ButtonPrimary";
 import ButtonOutline from "./misc/ButtonOutline.";
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
+import Partners from "../components/X_Partners";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 
 const CTA = () => {
@@ -124,6 +125,9 @@ const CTA = () => {
               <Gallery />
             </motion.div>
           </ScrollAnimationWrapper>
+
+          <Partners />
+
           <ScrollAnimationWrapper className="relative w-full mt-16">
             <motion.div variants={scrollAnimation} custom={{ duration: 3 }}>
               <div className="absolute rounded-xl  py-8 sm:py-14 px-6 sm:px-12 lg:px-16 w-full flex flex-col sm:flex-row justify-between items-center z-10 bg-slate-100">

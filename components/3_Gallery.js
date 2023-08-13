@@ -75,7 +75,7 @@ const Gallery = ({
       <Slider {...settings} arrows={false} ref={setSliderRef} className="flex items-stretch justify-items-stretch">
         {listImages.map((listTestimonis, index) => (
           <div className="px-1 flex items-stretch" key={index}>
-            <div className="border-2 border-slate-100 hover:border-yellow-500 transition-all flex">
+            <div className="border-2 border-slate-100 hover:border-yellow-500 transition-all flex mb-5">
               <Image src={listTestimonis.image} height={500} width={500} style={{ "object-fit": "cover" }} alt="Icon People" />
             </div>
           </div>

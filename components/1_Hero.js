@@ -17,9 +17,19 @@ const Hero = ({}) => {
         >
           <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">
             <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal">
-              Dengan <strong>Trisukses Bangun Karya</strong>, hunian idaman bukan hanya mimpi saja.
+              <strong>Trisukses Bangun Karya</strong>, kontraktor jasa bangun dan renovasi rumah terbaik.
             </h1>
-            <p className="text-slate-100 mt-4 mb-6">Kami menyediakan layanan profesional jasa bangun rumah dan renovasi untuk pelanggan pribadi.</p>
+            <p className="text-slate-900 mt-4 mb-2">
+              Trisukses Bangun Karya merupakan kasa kontraktor bangunan terbaik, terpercaya, dan amanah di dalam bidang konstruksi.
+            </p>
+            <p className="text-slate-900 mt-4 mb-2">
+              Kami berpengalaman dalam berbagai jenis konstruksi bangunan dan jasa bangun rumah. Seperti: rumah mewah, minimalis, klasik, tropis,
+              gudang, dan industrial dengan matrial pilihan dan tenaga yang ahli dibidangnya.
+            </p>
+            <p className="text-slate-900 mt-4 mb-6">
+              Anda dapat mengandalkan kami dalam hal <strong>kontraktor</strong> jasa bangun dan jasa renovasi rumah tinggal, rumah kos, ruko, kantor,
+              gudang, sipil, interior, café dan lainnya.
+            </p>
             <ButtonPrimary>Hubungi Kami</ButtonPrimary>
           </div>
           <div className="flex w-full">

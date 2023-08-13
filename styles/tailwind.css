@@ -7,7 +7,7 @@ html {
   font-family: "Rubik", sans-serif;
 }
 body {
-  @apply bg-slate-100;
+  @apply bg-white;
 }
 p {
   @apply text-slate-900;
