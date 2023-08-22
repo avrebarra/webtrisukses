@@ -3,23 +3,43 @@ import Image from "next/image";
 import { Link } from "react-scroll";
 import Facebook from "../../public/assets/Icon/facebook.svg";
 import Instagram from "../../public/assets/Icon/instagram.svg";
+import Tiktok from "../../public/assets/Icon/tiktok.svg";
+import * as constants from "../../data/constants";
+
 const Footer = () => {
   return (
     <div className="bg-white-300 pt-44 pb-24">
       <div className="max-w-screen-xl w-full mx-auto px-6 sm:px-8 lg:px-16 grid grid-rows-6 sm:grid-rows-1 grid-flow-row sm:grid-flow-col grid-cols-3 sm:grid-cols-12 gap-4">
         <div className="row-span-2 sm:col-span-4 col-start-1 col-end-4 sm:col-end-5 flex flex-col items-start ">
           <Image src="/webtrisukses/assets/logo.png" quality={100} width={180} height={50} />
-          <p className="mb-4">
-            <strong className="font-medium">CV Trisukses Bangun Karya</strong> adalah penyedia jasa bangun rumah dan renovasi profesional dengan track
-            record bintang lima.
+          <p className="my-4">
+            <strong className="font-medium">CV Trisukses Bangun Karya</strong> - Jasa bangun rumah dan renovasi dengan track record bintang lima.
           </p>
+          <p>Telp/WA - {constants.PHONE_NUMBER}</p>
+          <p className="mb-2">Email - {constants.EMAIL}</p>
+
+          <p>{constants.ADDRESS}</p>
           <div className="flex w-full mt-2 mb-8 -mx-2">
-            <div className="mx-2 bg-slate-100 rounded-full items-center justify-center flex p-2 shadow-md">
-              <Facebook className="h-6 w-6" />
-            </div>
-            <div className="mx-2 bg-slate-100 rounded-full items-center justify-center flex p-2 shadow-md">
-              <Instagram className="h-6 w-6" />
-            </div>
+            <a href="https://www.tiktok.com/@trisbangunkarya">
+              <div className="mx-2 bg-slate-100 rounded-full items-center justify-center flex p-2 shadow-md">
+                <Tiktok className="h-6 w-6 text-yellow-400" />
+              </div>
+            </a>
+            <a href="https://www.instagram.com/jasabangunrenovasisidoarjo">
+              <div className="mx-2 bg-slate-100 rounded-full items-center justify-center flex p-2 shadow-md">
+                <Instagram className="h-6 w-6" />
+              </div>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100095340162994">
+              <div className="mx-2 bg-slate-100 rounded-full items-center justify-center flex p-2 shadow-md">
+                <Facebook className="h-6 w-6" />
+              </div>
+            </a>
+            <a href="https://www.instagram.com/jasabangunrenovasipasuruan">
+              <div className="mx-2 bg-slate-100 rounded-full items-center justify-center flex p-2 shadow-md">
+                <Instagram className="h-6 w-6" />
+              </div>
+            </a>
           </div>
           <p className="text-gray-400">©{new Date().getFullYear()} - Aurelabs</p>
         </div>

@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 import Image from "next/image";
 import ButtonPrimary from "./misc/ButtonPrimary";
 import { motion } from "framer-motion";
+import * as constants from "../data/constants";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 
@@ -30,7 +31,9 @@ const Hero = ({}) => {
               Anda dapat mengandalkan kami dalam hal <strong>kontraktor</strong> jasa bangun dan jasa renovasi rumah tinggal, rumah kos, ruko, kantor,
               gudang, sipil, interior, café dan lainnya.
             </p>
-            <ButtonPrimary>Hubungi Kami</ButtonPrimary>
+            <a href={constants.WHATSAPP_MESSAGES.GENERAL}>
+              <ButtonPrimary>Hubungi Kami</ButtonPrimary>
+            </a>
           </div>
           <div className="flex w-full">
             <motion.div className="h-full w-full" variants={scrollAnimation}>

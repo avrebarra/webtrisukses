@@ -10,7 +10,14 @@ const Workways = () => {
   return (
     <div className="w-full py-16">
       <div className="max-w-screen-xl sm:mt-14 sm:mb-14 px-6 sm:px-8 lg:px-16 mx-auto" id="feature">
-        <div className="pb-12 w-full">
+        <div className="text-center">
+          <ScrollAnimationWrapper>
+            <motion.h3 variants={scrollAnimation} className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed">
+              Partner Kami
+            </motion.h3>
+          </ScrollAnimationWrapper>
+        </div>
+        <div className="py-12 w-full">
           <ScrollAnimationWrapper>
             <motion.div className="w-full text-center" variants={scrollAnimation}>
               <Image src={"/webtrisukses/assets/partners/partnerlogo-1.jpg"} height={50} width={100 / 2} />

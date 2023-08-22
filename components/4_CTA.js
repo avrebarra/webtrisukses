@@ -6,6 +6,7 @@ import ButtonOutline from "./misc/ButtonOutline.";
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import Partners from "../components/X_Partners";
+import * as constants from "../data/constants";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 
 const CTA = () => {
@@ -41,7 +42,9 @@ const CTA = () => {
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Bangun Rumah</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
-                  <ButtonOutline>Pilih</ButtonOutline>
+                  <a href={constants.WHATSAPP_MESSAGES.BANGUN_RUMAH}>
+                    <ButtonOutline>Pilih</ButtonOutline>
+                  </a>
                 </div>
               </motion.div>
             </ScrollAnimationWrapper>
@@ -61,7 +64,9 @@ const CTA = () => {
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Renovasi Rumah</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
-                  <ButtonOutline>Pilih</ButtonOutline>
+                  <a href={constants.WHATSAPP_MESSAGES.RENOVASI_RUMAH}>
+                    <ButtonOutline>Pilih</ButtonOutline>
+                  </a>
                 </div>
               </motion.div>
             </ScrollAnimationWrapper>
@@ -81,7 +86,9 @@ const CTA = () => {
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Building Maintenance</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
-                  <ButtonOutline>Pilih</ButtonOutline>
+                  <a href={constants.WHATSAPP_MESSAGES.BUILDING_MAINTENANCE}>
+                    <ButtonOutline>Pilih</ButtonOutline>
+                  </a>
                 </div>
               </motion.div>
             </ScrollAnimationWrapper>
@@ -101,7 +108,9 @@ const CTA = () => {
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Interior</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
-                  <ButtonOutline>Pilih</ButtonOutline>
+                  <a href={constants.WHATSAPP_MESSAGES.JASA_INTERIOR}>
+                    <ButtonOutline>Pilih</ButtonOutline>
+                  </a>
                 </div>
               </motion.div>
             </ScrollAnimationWrapper>
@@ -137,7 +146,9 @@ const CTA = () => {
                   </h5>
                   <p>Percayakan konstruksi bersama kami, kami akan buktikan hasilnya.</p>
                 </div>
-                <ButtonPrimary>Hubungi Kami</ButtonPrimary>
+                <a href={constants.WHATSAPP_MESSAGES.GENERAL}>
+                  <ButtonPrimary>Hubungi Kami</ButtonPrimary>
+                </a>
               </div>
               <div
                 className="absolute bg-black-600 opacity-5 w-11/12 roudned-lg h-60 sm:h-56 top-0 mt-8 mx-auto left-0 right-0"

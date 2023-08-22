@@ -16,26 +16,6 @@ const workways = [
   "10. Retensi atau garansi.",
 ];
 
-function reduceArrayToSets(array) {
-  const sets = [];
-
-  for (let i = 0; i < array.length; i += 2) {
-    const set = [];
-
-    if (i < array.length) {
-      set.push(array[i]);
-    }
-
-    if (i + 1 < array.length) {
-      set.push(array[i + 1]);
-    }
-
-    sets.push(set);
-  }
-
-  return sets;
-}
-
 const Workways = () => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
@@ -50,20 +30,34 @@ const Workways = () => {
           </ScrollAnimationWrapper>
         </div>
 
-        {reduceArrayToSets(workways).map((set, i) => (
-          <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-2 gap-8 mt-8 mb-6">
-            <ScrollAnimationWrapper>
-              <motion.div className="flex flex-col justify-center ml-auto w-full lg:w-9/12" variants={scrollAnimation}>
-                <h3 className="text-xl lg:text-2xl leading-relaxed text-black-600">{set[0]}</h3>
-              </motion.div>
-            </ScrollAnimationWrapper>
-            <ScrollAnimationWrapper>
-              <motion.div className="flex flex-col justify-center ml-auto w-full lg:w-9/12" variants={scrollAnimation}>
-                <h3 className="text-xl lg:text-2xl leading-relaxed text-black-600">{set[1]}</h3>
-              </motion.div>
-            </ScrollAnimationWrapper>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+          <div class="p-4">
+            {workways.map((el, i) => {
+              if (i < workways.length / 2) {
+                return (
+                  <ScrollAnimationWrapper>
+                    <motion.div className="flex flex-col justify-center ml-auto py-2 w-full lg:w-9/12" variants={scrollAnimation}>
+                      <h3 className="text-xl lg:text-2xl leading-relaxed text-black-600">{el}</h3>
+                    </motion.div>
+                  </ScrollAnimationWrapper>
+                );
+              }
+            })}
           </div>
-        ))}
+          <div class="p-4">
+            {workways.map((el, i) => {
+              if (i >= workways.length / 2) {
+                return (
+                  <ScrollAnimationWrapper>
+                    <motion.div className="flex flex-col justify-center ml-auto py-2 w-full lg:w-9/12" variants={scrollAnimation}>
+                      <h3 className="text-xl lg:text-2xl leading-relaxed text-black-600">{el}</h3>
+                    </motion.div>
+                  </ScrollAnimationWrapper>
+                );
+              }
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );
