@@ -1,4 +1,4 @@
 module.exports = {
-  content: ["./pages/*.js", "./pages/**/*.js", "./components/*.js", "./components/**/*.js"],
+  content: ["./pages/*.jsx", "./pages/**/*.jsx", "./components/*.jsx", "./components/**/*.jsx"],
   plugins: [],
 };

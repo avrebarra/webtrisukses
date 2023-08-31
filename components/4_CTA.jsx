@@ -2,10 +2,10 @@ import React, { useMemo } from "react";
 import Image from "next/image";
 import Gallery from "./3_Gallery";
 import ButtonPrimary from "./misc/ButtonPrimary";
-import ButtonOutline from "./misc/ButtonOutline.";
+import ButtonOutline from "./misc/ButtonOutline";
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
-import Partners from "../components/X_Partners";
+import Partners from "./X_Partners";
 import * as constants from "../data/constants";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 
@@ -38,7 +38,7 @@ const CTA = () => {
                 }}
               >
                 <div className="p-4 lg:p-0 mt-6">
-                  <Image src="/webtrisukses/assets/service_building.jpg" width={150} height={150} alt="Free Plan" />
+                  <Image src="/assets/service_building.jpg" width={150} height={150} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Bangun Rumah</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
@@ -60,7 +60,7 @@ const CTA = () => {
                 }}
               >
                 <div className="p-4 lg:p-0 mt-6">
-                  <Image src="/webtrisukses/assets/service_renovation.jpg" width={150} height={150} alt="Free Plan" />
+                  <Image src="/assets/service_renovation.jpg" width={150} height={150} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Renovasi Rumah</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
@@ -82,7 +82,7 @@ const CTA = () => {
                 }}
               >
                 <div className="p-4 lg:p-0 mt-6">
-                  <Image src="/webtrisukses/assets/service_maintenance.jpg" width={150} height={150} alt="Free Plan" />
+                  <Image src="/assets/service_maintenance.jpg" width={150} height={150} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Building Maintenance</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
@@ -104,7 +104,7 @@ const CTA = () => {
                 }}
               >
                 <div className="p-4 lg:p-0 mt-6">
-                  <Image src="/webtrisukses/assets/service_interior.jpg" width={150} height={150} alt="Free Plan" />
+                  <Image src="/assets/service_interior.jpg" width={150} height={150} alt="Free Plan" />
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Interior</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
