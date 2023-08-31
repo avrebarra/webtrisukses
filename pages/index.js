@@ -1,5 +1,7 @@
 import Feature from "../components/2_Feature";
-import CTA from "../components/4_CTA";
+import CTA from "../components/X_CTA";
+import Jasa from "../components/X_Jasa";
+import Gallery from "../components/3_Gallery";
 import Hero from "../components/1_Hero";
 import Workways from "../components/X_Workways";
 import Layout from "../components/Layout/Layout";
@@ -13,6 +15,8 @@ export default function Home() {
         <Hero />
         <Feature />
         <Workways />
+        <Jasa />
+        <Gallery />
         <CTA />
       </Layout>
     </>

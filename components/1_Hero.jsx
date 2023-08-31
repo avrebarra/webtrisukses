@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import Image from "next/image";
 import ButtonPrimary from "./misc/ButtonPrimary";
+import ButtonOutline from "./misc/ButtonOutline";
 import { motion } from "framer-motion";
 import * as constants from "../data/constants";
 import getScrollAnimation from "../utils/getScrollAnimation";
