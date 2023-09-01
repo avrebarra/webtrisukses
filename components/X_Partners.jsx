@@ -8,7 +8,7 @@ const Workways = () => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
   return (
-    <div className="w-full py-16">
+    <div className="w-full">
       <div className="max-w-screen-xl sm:mt-14 sm:mb-14 px-6 sm:px-8 lg:px-16 mx-auto" id="feature">
         <div className="text-center">
           <ScrollAnimationWrapper>
@@ -17,30 +17,27 @@ const Workways = () => {
             </motion.h3>
           </ScrollAnimationWrapper>
         </div>
-        <div className="py-12 w-full">
-          <ScrollAnimationWrapper>
-            <motion.div className="w-full text-center" variants={scrollAnimation}>
-              <Image src={"/assets/partners/partnerlogo-1.jpg"} height={50} width={100 / 2} />
-              <Image src={"/assets/partners/partnerlogo-2.jpg"} height={50} width={100 / 2} />
-              <Image src={"/assets/partners/partnerlogo-3.png"} height={50} width={300 / 2} />
-              <Image src={"/assets/partners/partnerlogo-4.png"} height={50} width={150 / 2} />
-              <Image src={"/assets/partners/partnerlogo-5.jpg"} height={50} width={300 / 2} />
-              <Image src={"/assets/partners/partnerlogo-6.jpg"} height={50} width={200 / 2} />
-              <Image src={"/assets/partners/partnerlogo-7.jpeg"} height={50} width={300 / 2} />
-              <Image src={"/assets/partners/partnerlogo-8.jpg"} height={50} width={300 / 2} />
-              <Image src={"/assets/partners/partnerlogo-9.png"} height={50} width={300 / 2} />
-              <Image src={"/assets/partners/partnerlogo-10.jpeg"} height={50} width={500 / 2} />
-              <Image src={"/assets/partners/partnerlogo-11.png"} height={50} width={500 / 2} />
-              <Image src={"/assets/partners/partnerlogo-12.jpg"} height={50} width={300 / 2} />
-              <Image src={"/assets/partners/partnerlogo-13.jpg"} height={50} width={150 / 2} />
-              <Image src={"/assets/partners/partnerlogo-14.jpg"} height={50} width={250 / 2} />
-              <Image src={"/assets/partners/partnerlogo-15.png"} height={50} width={150 / 2} />
-              <Image src={"/assets/partners/partnerlogo-16.jpg"} height={50} width={200 / 2} />
-              <Image src={"/assets/partners/partnerlogo-17.jpg"} height={50} width={200 / 2} />
-              <Image src={"/assets/partners/partnerlogo-18.png"} height={50} width={250 / 2} />
-              <Image src={"/assets/partners/partnerlogo-19.jpg"} height={50} width={150 / 2} />
-            </motion.div>
-          </ScrollAnimationWrapper>
+        <div className="py-12 w-full flex gap-3 flex-wrap justify-center">
+          <img className="h-12" src={"/assets/partners/partnerlogo-1.jpg"} />
+          <img className="h-12" src={"/assets/partners/partnerlogo-2.jpg"} />
+          <img className="h-12" src={"/assets/partners/partnerlogo-3.png"} />
+          <img className="h-12" src={"/assets/partners/partnerlogo-4.png"} />
+          <img className="h-12" src={"/assets/partners/partnerlogo-5.jpg"} />
+          <img className="h-12" src={"/assets/partners/partnerlogo-6.jpg"} />
+          <img className="h-12" src={"/assets/partners/partnerlogo-7.jpeg"} />
+          <img className="h-12" src={"/assets/partners/partnerlogo-8.jpg"} />
+          <img className="h-12" src={"/assets/partners/partnerlogo-9.png"} />
+          <img className="h-12" src={"/assets/partners/partnerlogo-10.jpeg"} />
+          <img className="h-12" src={"/assets/partners/partnerlogo-11.png"} />
+          <img className="h-12" src={"/assets/partners/partnerlogo-12.jpg"} />
+          <img className="h-12" src={"/assets/partners/partnerlogo-13.jpg"} />
+          <img className="h-12" src={"/assets/partners/partnerlogo-14.jpg"} />
+          <img className="h-12" src={"/assets/partners/partnerlogo-15.png"} />
+          <img className="h-12" src={"/assets/partners/partnerlogo-16.jpg"} />
+          <img className="h-12" src={"/assets/partners/partnerlogo-17.jpg"} />
+          <img className="h-12" src={"/assets/partners/partnerlogo-18.png"} />
+          <img className="h-12" src={"/assets/partners/partnerlogo-19.jpg"} />
+          <img className="h-12" src={"/assets/partners/partnerlogo-20.webp"} />
         </div>
       </div>
     </div>
