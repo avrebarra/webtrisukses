@@ -4,6 +4,7 @@ import Jasa from "../components/X_Jasa";
 import Gallery from "../components/3_Gallery";
 import Hero from "../components/1_Hero";
 import Workways from "../components/X_Workways";
+import Partners from "../components/X_Partners";
 import Layout from "../components/Layout/Layout";
 import SEOHead from "../components/SeoHead";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <Workways />
         <Jasa />
         <Gallery />
+        <Partners />
         <CTA />
       </Layout>
     </>

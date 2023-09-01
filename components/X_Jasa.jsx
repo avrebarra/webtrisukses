@@ -1,18 +1,51 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import ButtonOutline from "./misc/ButtonOutline";
-// import OverlayJasa from "./misc/OverlayJasa";
+import OverlayJasa from "./misc/OverlayJasa";
 import Image from "next/image";
 import * as constants from "../data/constants";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 
+const SUBMENU_JASA = {
+  BANGUN_RUMAH: [
+    { name: "Bangun Rumah", url: constants.WHATSAPP_MESSAGES.BANGUN_RUMAH_BANGUN_RUMAH },
+    { name: "Bangun Ruko", url: constants.WHATSAPP_MESSAGES.BANGUN_RUMAH_BANGUN_RUKO },
+    { name: "Bangun Rumah Kost", url: constants.WHATSAPP_MESSAGES.BANGUN_RUMAH_BANGUN_RUMAH_KOST },
+    { name: "Bangun Toko", url: constants.WHATSAPP_MESSAGES.BANGUN_RUMAH_BANGUN_TOKO },
+  ],
+  RENOVASI: [
+    { name: "Meningkat Rumah", url: constants.WHATSAPP_MESSAGES.RENOVASI_MENINGKAT_RUMAH },
+    { name: "Pengecatan", url: constants.WHATSAPP_MESSAGES.RENOVASI_PENGECATAN },
+    { name: "Renovasi Rumah Lainnya", url: constants.WHATSAPP_MESSAGES.RENOVASI_RENOVASI_RUMAH_LAINNYA },
+    { name: "Taman Dan Kolam Ikan", url: constants.WHATSAPP_MESSAGES.RENOVASI_TAMAN_DAN_KOLAM_IKAN },
+    { name: "Tambah Ruangan", url: constants.WHATSAPP_MESSAGES.RENOVASI_TAMBAH_RUANGAN },
+    { name: "Kolam Renang", url: constants.WHATSAPP_MESSAGES.RENOVASI_KOLAM_RENANG },
+    { name: "Buat Dak", url: constants.WHATSAPP_MESSAGES.RENOVASI_BUAT_DAK },
+    { name: "Pasang Atap Baja Ringan", url: constants.WHATSAPP_MESSAGES.RENOVASI_PASANG_ATAP_BAJA_RINGAN },
+  ],
+  MAINTENANCE_BUILDING: [
+    { name: "Service & Cuci AC", url: constants.WHATSAPP_MESSAGES.MAINTENANCE_SERVICE_CUCI_AC },
+    { name: "Instalasi CCTV", url: constants.WHATSAPP_MESSAGES.MAINTENANCE_INSTALASI_CCTV },
+    { name: "Pasang Kitchen Set", url: constants.WHATSAPP_MESSAGES.MAINTENANCE_PASANG_KITCHEN_SET },
+  ],
+};
+
 const Jasa = () => {
+  const [overlayData, setOverlayData] = useState([]);
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
   return (
     <div className="bg-gradient-to-b from-white-300 to-slate-100 w-full py-14" id="pricing">
-      {/* <OverlayJasa listJasa={[]} > */}
+      <div className={overlayData.length ? "" : "hidden"}>
+        <OverlayJasa
+          listJasa={overlayData}
+          onClose={() => {
+            setOverlayData([]);
+          }}
+        />
+      </div>
+
       <div className="max-w-screen-xl  px-6 sm:px-8 lg:px-16 mx-auto flex flex-col w-full text-center justify-center">
         <div className="flex flex-col w-full">
           <ScrollAnimationWrapper>
@@ -41,7 +74,11 @@ const Jasa = () => {
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Bangun Rumah</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
-                  <a href={constants.WHATSAPP_MESSAGES.BANGUN_RUMAH}>
+                  <a
+                    onClick={() => {
+                      setOverlayData(SUBMENU_JASA.BANGUN_RUMAH);
+                    }}
+                  >
                     <ButtonOutline>Pilih</ButtonOutline>
                   </a>
                 </div>
@@ -63,7 +100,11 @@ const Jasa = () => {
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Renovasi Rumah</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
-                  <a href={constants.WHATSAPP_MESSAGES.RENOVASI_RUMAH}>
+                  <a
+                    onClick={() => {
+                      setOverlayData(SUBMENU_JASA.RENOVASI);
+                    }}
+                  >
                     <ButtonOutline>Pilih</ButtonOutline>
                   </a>
                 </div>
@@ -85,7 +126,11 @@ const Jasa = () => {
                 </div>
                 <p className="text-lg text-black-600 font-medium capitalize my-4 sm:my-4">Jasa Building Maintenance</p>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none ">
-                  <a href={constants.WHATSAPP_MESSAGES.BUILDING_MAINTENANCE}>
+                  <a
+                    onClick={() => {
+                      setOverlayData(SUBMENU_JASA.MAINTENANCE_BUILDING);
+                    }}
+                  >
                     <ButtonOutline>Pilih</ButtonOutline>
                   </a>
                 </div>
