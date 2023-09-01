@@ -71,16 +71,16 @@ const Header = () => {
             </LinkScroll>
             <LinkScroll
               activeClass="active"
-              to="testimoni"
+              to="galeri"
               spy={true}
               smooth={true}
               duration={1000}
               onSetActive={() => {
-                setActiveLink("testimoni");
+                setActiveLink("galeri");
               }}
               className={
                 "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
-                (activeLink === "testimoni" ? " text-yellow-500 animation-active " : " text-slate-100 hover:text-yellow-500 ")
+                (activeLink === "galeri" ? " text-yellow-500 animation-active " : " text-slate-100 hover:text-yellow-500 ")
               }
             >
               Galeri
@@ -96,8 +96,8 @@ const Header = () => {
 
       {/* Mobile Navigation */}
 
-      <nav className="fixed lg:hidden bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t ">
-        <div className="bg-slate-100 sm:px-3">
+      <nav className="fixed lg:hidden bottom-0 left-0 right-0 z-20 shadow-t ">
+        <div className="bg-slate-900 sm:px-3">
           <ul className="flex w-full justify-between items-center text-slate-100">
             <LinkScroll
               activeClass="active"
