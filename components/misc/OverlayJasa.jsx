@@ -10,7 +10,10 @@ const OverlayJasa = ({ listJasa, onClose }) => {
         <div className="grid grid-cols-2 gap-3 mb-6">
           {listJasa.map((e) => (
             <a href={e.url}>
-              <div className="service-card cursor-pointer border-solid text-lg border-gray-200 p-3 shadow-md text-center hover:border-yellow-500 border-2 h-full center">
+              <div className="service-card cursor-pointer border-solid text-lg border-gray-200 p-3 shadow-md text-center hover:border-yellow-500 border-2 h-full center flex flex-wrap gap-2">
+                <div className="icon w-6">
+                  <img src={e.icon_url} alt="" srcset="" />
+                </div>
                 <div className="name">{e.name}</div>
               </div>
             </a>

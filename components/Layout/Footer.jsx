@@ -53,17 +53,23 @@ const Footer = () => {
         <div className=" row-span-2 sm:col-span-2 sm:col-start-7 sm:col-end-9 flex flex-col">
           <p className="text-black-600 mb-4 font-medium text-lg">Layanan & Jasa</p>
           <ul className="text-slate-900 ">
-            <Link activeClass="active" to="feature" spy={true} smooth={true} duration={1000}>
-              <li className="my-2 hover:text-yellow-500 cursor-pointer transition-all">Bangun Rumah </li>
-            </Link>
-            <Link activeClass="active" to="feature" spy={true} smooth={true} duration={1000}>
+            <Link activeClass="active" to="jasa" spy={true} smooth={true} duration={1000}>
               <li className="my-2 hover:text-yellow-500 cursor-pointer transition-all">Renovasi Rumah </li>
             </Link>
-            <Link activeClass="active" to="feature" spy={true} smooth={true} duration={1000}>
-              <li className="my-2 hover:text-yellow-500 cursor-pointer transition-all">Building Maintenance </li>
+            <Link activeClass="active" to="jasa" spy={true} smooth={true} duration={1000}>
+              <li className="my-2 hover:text-yellow-500 cursor-pointer transition-all">Bangun Rumah </li>
             </Link>
-            <Link activeClass="active" to="feature" spy={true} smooth={true} duration={1000}>
-              <li className="my-2 hover:text-yellow-500 cursor-pointer transition-all">Interior </li>
+            <Link activeClass="active" to="jasa" spy={true} smooth={true} duration={1000}>
+              <li className="my-2 hover:text-yellow-500 cursor-pointer transition-all">Desain </li>
+            </Link>
+            <Link activeClass="active" to="jasa" spy={true} smooth={true} duration={1000}>
+              <li className="my-2 hover:text-yellow-500 cursor-pointer transition-all">Plafon Rumah </li>
+            </Link>
+            <Link activeClass="active" to="jasa" spy={true} smooth={true} duration={1000}>
+              <li className="my-2 hover:text-yellow-500 cursor-pointer transition-all">Atap Baja Ringan </li>
+            </Link>
+            <Link activeClass="active" to="jasa" spy={true} smooth={true} duration={1000}>
+              <li className="my-2 hover:text-yellow-500 cursor-pointer transition-all">Pagar Rumah </li>
             </Link>
           </ul>
         </div>
