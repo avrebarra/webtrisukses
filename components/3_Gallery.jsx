@@ -14,8 +14,8 @@ const Gallery = ({
   listTestimoni: listImages = [
     { image: "/assets/gallery/item_1.jpg" },
     { image: "/assets/gallery/item_2.jpg" },
-    { image: "/assets/gallery/item_3.jpg" },
     { image: "/assets/gallery/item_4.jpg" },
+    { image: "/assets/gallery/item_3.jpg" },
     { image: "/assets/gallery/item_5.jpg" },
     { image: "/assets/gallery/item_6.jpg" },
     { image: "/assets/gallery/item_7.jpg" },
