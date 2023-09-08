@@ -74,10 +74,7 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Replace asset's baseurl
-        run: |
-          # Replace "/assets/ with "/webtrisukses/assets/ in all files
-          find . -type f -exec sed -i 's/\/assets\//\/webtrisukses\/assets\//g' {} +
-        shell: bash
+        run: node ./.scripts/changebaseurl.js
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Static HTML export with Next.js

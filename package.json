@@ -22,6 +22,7 @@
     "react-dom": "^17.0.2",
     "react-scroll": "^1.8.1",
     "react-slick": "^0.27.13",
+    "replace-in-file": "^7.0.1",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^3.3.3"
   },
