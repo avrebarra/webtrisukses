@@ -34,7 +34,7 @@ const Hero = ({}) => {
             </a>
           </div>
           <div className="flex w-full">
-            <img src="/webtrisukses/assets/hero2.png" className="w-full object-cover h-full" alt="VPN Illustrasi" />
+            <img src="/assets/hero2.png" className="w-full object-cover h-full" alt="VPN Illustrasi" />
           </div>
         </div>
         <div className="relative w-full flex">
