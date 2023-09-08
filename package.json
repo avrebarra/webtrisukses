@@ -1,6 +1,7 @@
 {
   "name": "webprofiletrisukses",
   "version": "1.0.0",
+  "homepage": "https://webtrisukses.github.io/webtrisukses",
   "private": true,
   "scripts": {
     "dev": "next dev",
