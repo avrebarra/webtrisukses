@@ -1,4 +1,7 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import * as constants from "../../../data/constants";
 
 const CTA = () => {
   return (
@@ -11,9 +14,12 @@ const CTA = () => {
           Konsultasikan kebutuhan Anda sekarang, gratis. Kami akan buktikan hasilnya.
         </p>
         <a
-          href="https://api.whatsapp.com/send?phone=6282257460176"
-          className="inline-block mt-8 bg-slate-900 hover:bg-slate-800 text-white font-semibold px-10 py-4 rounded shadow-lg transition-all"
+          href={constants.WHATSAPP_MESSAGES.GENERAL}
+          target="_blank"
+          rel="noopener"
+          className="inline-flex items-center justify-center gap-2 mt-8 bg-slate-900 hover:bg-slate-800 text-white font-semibold px-10 py-4 rounded shadow-lg transition-all"
         >
+          <FontAwesomeIcon icon={faWhatsapp} className="w-[18px] h-[18px]" aria-hidden="true" />
           Hubungi Kami via WhatsApp
         </a>
       </div>

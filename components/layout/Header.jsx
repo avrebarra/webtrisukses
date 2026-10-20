@@ -1,4 +1,7 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import * as constants from "../../data/constants";
 
 const NAV = [
   { href: "#hero", label: "Beranda" },
@@ -29,9 +32,12 @@ const Header = () => {
           ))}
         </ul>
         <a
-          href="https://api.whatsapp.com/send?phone=6282257460176"
-          className="bg-amber-400 hover:bg-amber-300 text-slate-900 text-sm font-semibold px-4 sm:px-5 py-2.5 rounded shadow-md shadow-amber-400/30 transition-all whitespace-nowrap"
+          href={constants.WHATSAPP_MESSAGES.GENERAL}
+          target="_blank"
+          rel="noopener"
+          className="inline-flex items-center gap-1.5 bg-amber-400 hover:bg-amber-300 text-slate-900 text-sm font-semibold px-4 sm:px-5 py-2.5 rounded shadow-md shadow-amber-400/30 transition-all whitespace-nowrap"
         >
+          <FontAwesomeIcon icon={faWhatsapp} className="w-4 h-4" aria-hidden="true" />
           Hubungi Kami
         </a>
       </nav>
