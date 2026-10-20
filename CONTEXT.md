@@ -15,13 +15,19 @@ Ticket H26MHXX — "Upgrade toolchain: Next 12→14, React 17→18, Node 16→20
 - `tailwind.config.js` — verify content globs if needed
 
 ## Status
-- [ ] CONTEXT.md committed
-- [ ] Create next.config.js
-- [ ] Bump deps (next 14, react 18, framer-motion 11, tailwind 3.4)
-- [ ] Clean _document.js
-- [ ] Update GitHub workflow
-- [ ] Remove yarn.lock, npm install, audit fix
-- [ ] Verify build + audit
+- [x] CONTEXT.md committed
+- [x] Create next.config.js (output: export + images.unoptimized)
+- [x] Bump deps: next 14.2, react 18.3, framer-motion 11, tailwind 3.4, react-slick 0.30.2, purgecss 8, @babel/runtime 7.22.5
+- [x] Clean _document.js (remove no-op getInitialProps)
+- [x] Update workflow: actions v4, node 20, drop next export, simplify to npm ci
+- [x] Remove yarn.lock, fresh npm install (20→11 vulns, 2→1 critical fixed)
+- [x] Verify: `npm run build` succeeds → out/index.html + out/404.html generated
+
+## Results
+- `npm run build` with Next 14.2.35 succeeds, SWC disabled due to .babelrc (expected), out/ generated
+- `npm audit`: 20 (2 critical) → 12 (1 critical) — remaining 11 require Next 16 / Tailwind 4 breaking upgrades (out of scope for 14)
+- Critical fixed: source-map-js, svgo, yaml; remaining critical is Next 14's own advisory (needs 15.5.24+)
+- Workflow simplified, output: export verified
 
 ## Review notes
 Check `npm run build` produces `out/` with unoptimized images, `npm audit` 0 high/critical, workflow deploys on push to main. Framer-motion API same (motion.div) — but verify build. No UI changes expected.
