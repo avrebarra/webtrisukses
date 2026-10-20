@@ -23,21 +23,21 @@ const Footer = () => {
         <div className="text-center sm:text-left">
           <p className="font-semibold text-white mb-4">Kontak</p>
           <ul className="text-sm space-y-2 text-slate-400">
-            <li className="flex items-start gap-2">
+            <li className="flex items-start justify-center sm:justify-start gap-2 text-left">
               <FontAwesomeIcon
                 icon={faPhone}
                 className="w-3.5 h-3.5 mt-1 shrink-0 text-amber-400"
               />
               <span>0822-5746-0176</span>
             </li>
-            <li className="flex items-start gap-2">
+            <li className="flex items-start justify-center sm:justify-start gap-2 text-left">
               <FontAwesomeIcon
                 icon={faEnvelope}
                 className="w-3.5 h-3.5 mt-1 shrink-0 text-amber-400"
               />
               <span>tris.bangunkarya@gmail.com</span>
             </li>
-            <li className="flex items-start gap-2">
+            <li className="flex items-start justify-center sm:justify-start gap-2 text-left max-w-[22rem] mx-auto sm:mx-0 sm:max-w-none">
               <FontAwesomeIcon
                 icon={faLocationDot}
                 className="w-3.5 h-3.5 mt-1 shrink-0 text-amber-400"
