@@ -1,4 +1,7 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import * as constants from "../../../data/constants";
 
 const Hero = () => {
   return (
@@ -37,9 +40,16 @@ const Hero = () => {
             </p>
             <div className="flex flex-col lg:flex-row gap-3 mt-7">
               <a
-                href="https://api.whatsapp.com/send?phone=6282257460176"
-                className="w-full lg:w-auto text-center whitespace-nowrap bg-amber-400 hover:bg-amber-300 text-sm font-semibold px-5 lg:px-6 py-3.5 rounded shadow-md shadow-amber-400/30 transition-all flex items-center justify-center"
+                href={constants.WHATSAPP_MESSAGES.GENERAL}
+                target="_blank"
+                rel="noopener"
+                className="w-full lg:w-auto text-center whitespace-nowrap bg-amber-400 hover:bg-amber-300 text-sm font-semibold px-5 lg:px-6 py-3.5 rounded shadow-md shadow-amber-400/30 transition-all flex items-center justify-center gap-2"
               >
+                <FontAwesomeIcon
+                  icon={faWhatsapp}
+                  className="w-[18px] h-[18px]"
+                  aria-hidden="true"
+                />
                 Mulai Proyek Anda
               </a>
               <a
@@ -61,7 +71,10 @@ const Hero = () => {
           </p>
         </div>
         <a
-          href="https://api.whatsapp.com/send?phone=6282257460176"
+          href={constants.WHATSAPP_MESSAGES.GENERAL}
+          target="_blank"
+          rel="noopener"
+          aria-label="Hubungi via WhatsApp"
           className="shrink-0 w-10 h-10 rounded-full bg-amber-400 hover:bg-amber-300 flex items-center justify-center text-slate-900 transition-colors"
         >
           <svg

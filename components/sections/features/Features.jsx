@@ -1,4 +1,13 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLocationDot,
+  faComments,
+  faPenRuler,
+  faClipboardList,
+  faShieldHalved,
+  faCalendarDays,
+} from "@fortawesome/free-solid-svg-icons";
 
 const cards = [
   {
@@ -34,70 +43,17 @@ const cards = [
   },
 ];
 
+const iconMap = {
+  pin: faLocationDot,
+  chat: faComments,
+  doc: faPenRuler,
+  list: faClipboardList,
+  shield: faShieldHalved,
+  calendar: faCalendarDays,
+};
+
 function Icon({ name }) {
-  const cls = "w-6 h-6 text-amber-600";
-  if (name === "pin")
-    return (
-      <svg className={cls} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 11a3 3 0 100-6 3 3 0 000 6z" />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M12 22s7-6.5 7-11a7 7 0 10-14 0c0 4.5 7 11 7 11z"
-        />
-      </svg>
-    );
-  if (name === "chat")
-    return (
-      <svg className={cls} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M8 10h8M8 14h5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-        />
-      </svg>
-    );
-  if (name === "doc")
-    return (
-      <svg className={cls} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M7 21a2 2 0 01-2-2V5a2 2 0 012-2h9l5 5v11a2 2 0 01-2 2H7z"
-        />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15 3v6h6" />
-      </svg>
-    );
-  if (name === "list")
-    return (
-      <svg className={cls} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M9 7h6M9 11h6M9 15h6M5 5a2 2 0 012-2h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5z"
-        />
-      </svg>
-    );
-  if (name === "shield")
-    return (
-      <svg className={cls} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
-        />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
-      </svg>
-    );
-  return (
-    <svg className={cls} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M8 7V3m8 4V3M3 11h18M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-      />
-    </svg>
-  );
+  return <FontAwesomeIcon icon={iconMap[name]} className="w-5 h-5 text-amber-600" />;
 }
 
 const Feature = () => {
