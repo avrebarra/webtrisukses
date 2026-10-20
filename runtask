@@ -1,0 +1,169 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# ─── commands (self-documenting) ─────────────────────────────────────────────
+# %w[ns sub] => c("desc") { body } — run via ./runtask ns sub
+# Block bodies resolve constants/methods at call time — helpers live below.
+# c() itself runs eagerly while the registry builds, so it lives here.
+# c("...") descriptions evaluate eagerly — plain strings only, no interpolation.
+# desc nil => command hidden from usage (internal commands).
+
+def c(desc, &block)
+  [desc, block]
+end
+
+GROUPS = {
+  ""          => "General",
+  "toolchain" => "Toolchain (H26MHXX)",
+}.freeze
+
+COMMANDS = {
+  %w[dev]               => c("Start dev server (next dev)") { run "npm run dev" },
+  %w[build]             => c("Build static export") { build_export },
+  %w[clean]             => c("Clean out/ and .next/") { run "rm -rf out .next" },
+  %w[audit]             => c("Run npm audit") { audit_summary },
+  %w[verify]            => c("Full verify: node, config, workflow, build, out/, audit") { verify_all },
+  %w[toolchain verify]  => c("Alias of verify") { verify_all },
+  %w[toolchain build]   => c("Build + check out/") { build_export },
+  %w[toolchain audit]   => c("Audit only") { audit_summary },
+  %w[toolchain check]   => c("Check node/config/workflow without building") { check_env },
+}.freeze
+
+# ─── config & helpers ────────────────────────────────────────────────────────
+
+SCRIPT_DIR = File.dirname(File.expand_path(__FILE__))
+
+def load_env(path)
+  return unless File.exist?(path)
+  File.readlines(path).each do |line|
+    line = line.strip
+    next if line.empty? || line.start_with?("#")
+    key, value = line.split("=", 2)
+    next if key.nil? || value.nil?
+    ENV[key.strip] = value.strip.delete(%q('"))
+  end
+end
+
+def bail(msg)
+  warn "❌ #{msg}"
+  exit 1
+end
+
+def run(cmd)
+  puts "  $ #{cmd}"
+  bail("#{cmd.split.first} failed (exit #{$?.exitstatus})") unless system(cmd)
+  true
+end
+
+def check_env
+  puts ">>> toolchain check"
+  puts ""
+  # node version
+  node_v = `node -v`.strip
+  puts "  node: #{node_v} (workflow pins 20, local #{node_v} ok if >=18)"
+  # next.config.js
+  cfg = File.join(SCRIPT_DIR, "next.config.js")
+  if File.exist?(cfg) && File.read(cfg).include?('output: "export"')
+    puts "  next.config.js: output: export ✓"
+  else
+    puts "  next.config.js: missing output: export ✗"
+  end
+  if File.exist?(cfg) && File.read(cfg).include?("unoptimized: true")
+    puts "  next.config.js: images.unoptimized ✓"
+  else
+    puts "  next.config.js: missing images.unoptimized ✗"
+  end
+  # workflow
+  wf = File.join(SCRIPT_DIR, ".github/workflows/nextjs.yml")
+  if File.exist?(wf)
+    content = File.read(wf)
+    puts "  workflow actions/checkout@v4: #{content.include?('actions/checkout@v4') ? '✓' : '✗'}"
+    puts "  workflow setup-node@v4: #{content.include?('actions/setup-node@v4') ? '✓' : '✗'}"
+    puts "  workflow node 20: #{content.include?('node-version: "20"') ? '✓' : '✗'}"
+    puts "  workflow deploy-pages@v4: #{content.include?('actions/deploy-pages@v4') ? '✓' : '✗'}"
+    puts "  workflow no next export: #{content.include?('next export') ? '✗ still present' : '✓ removed'}"
+  else
+    puts "  workflow: not found"
+  end
+  # yarn.lock removed
+  if File.exist?(File.join(SCRIPT_DIR, "yarn.lock"))
+    puts "  yarn.lock: still present ✗ (should be removed)"
+  else
+    puts "  yarn.lock: removed ✓"
+  end
+  puts ""
+  true
+end
+
+def build_export
+  puts ">>> building static export"
+  run "npm run build"
+  out = File.join(SCRIPT_DIR, "out/index.html")
+  if File.exist?(out)
+    size = File.size(out)
+    puts "  out/index.html: #{size} bytes ✓"
+  else
+    bail("out/index.html not found — build may have failed")
+  end
+  puts "  build ok ✓"
+  true
+end
+
+def audit_summary
+  puts ">>> npm audit"
+  system("npm audit 2>&1 | tail -30")
+  puts ""
+  puts "  tip: remaining high/critical after this upgrade needs Next 16 / Tailwind 4 (breaking, out of scope)"
+  true
+end
+
+def verify_all
+  puts ">>> full toolchain verify (H26MHXX)"
+  puts ""
+  check_env
+  build_export
+  puts ""
+  audit_summary
+  puts ""
+  puts "✅ verify done — check out/index.html in browser: open out/index.html"
+  true
+end
+
+load_env("#{SCRIPT_DIR}/.env")
+
+# ─── usage (auto-generated) ──────────────────────────────────────────────────
+
+def usage(group = nil)
+  lines = ["Usage: ./runtask <command>", ""]
+  groups = group ? { group => GROUPS[group] } : GROUPS
+  groups.each do |ns, label|
+    cmds = if ns == ""
+      COMMANDS.select { |k, _| k.length == 1 }
+    else
+      COMMANDS.select { |k, _| k.length > 1 && k.first == ns }
+    end
+    next if cmds.empty?
+    lines << "#{label}:"
+    cmds.each do |k, (desc, _)|
+      next if desc.nil?
+      lines << "  #{k.join(" ").ljust(18)}#{desc}"
+    end
+    lines << ""
+  end
+  lines.join("\n")
+end
+
+# ─── dispatch ────────────────────────────────────────────────────────────────
+
+input = ARGV.map(&:downcase)
+entry = COMMANDS[input]
+
+if entry
+  exit entry[1].call ? 0 : 1
+elsif input.length == 1 && GROUPS.key?(input[0])
+  puts usage(input[0])
+  exit 0
+else
+  puts usage
+  exit 1
+end

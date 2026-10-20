@@ -13,6 +13,7 @@ Ticket H26MHXX — "Upgrade toolchain: Next 12→14, React 17→18, Node 16→20
 - `pages/_document.js` — remove no-op `getInitialProps` (YAGNI)
 - `yarn.lock` — remove, use `package-lock.json` only
 - `tailwind.config.js` — verify content globs if needed
+- `runtask` (new) — local test harness: `verify`/`build`/`audit`/`toolchain check` for H26MHXX
 
 ## Status
 - [x] CONTEXT.md committed
