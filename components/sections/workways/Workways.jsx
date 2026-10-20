@@ -1,7 +1,7 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import getScrollAnimation from "../utils/getScrollAnimation";
-import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
+import useScrollAnimation from "../../../hooks/useScrollAnimation";
+import ScrollAnimationWrapper from "../../ui/ScrollAnimationWrapper";
 
 const workways = [
   "1. Order via online.",
@@ -17,7 +17,7 @@ const workways = [
 ];
 
 const Workways = () => {
-  const scrollAnimation = useMemo(() => getScrollAnimation(), []);
+  const scrollAnimation = useScrollAnimation();
 
   return (
     <div className="w-full py-16">

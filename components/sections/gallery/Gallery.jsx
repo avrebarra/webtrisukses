@@ -1,14 +1,14 @@
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 
 // import react slick
 import Slider from "react-slick";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import ArrowBack from "../public/assets/Icon/eva_arrow-back-fill.svg";
-import ArrowNext from "../public/assets/Icon/eva_arrow-next-fill.svg";
-import getScrollAnimation from "../utils/getScrollAnimation";
-import * as constants from "../data/constants";
-import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
+import ArrowBack from "../../../public/assets/Icon/eva_arrow-back-fill.svg";
+import ArrowNext from "../../../public/assets/Icon/eva_arrow-next-fill.svg";
+import * as constants from "../../../data/constants";
+import useScrollAnimation from "../../../hooks/useScrollAnimation";
+import ScrollAnimationWrapper from "../../ui/ScrollAnimationWrapper";
 
 const Gallery = ({
   listTestimoni: listImages = [
@@ -74,7 +74,7 @@ const Gallery = ({
   };
 
   const [sliderRef, setSliderRef] = useState(null);
-  const scrollAnimation = useMemo(() => getScrollAnimation(), []);
+  const scrollAnimation = useScrollAnimation();
 
   return (
     <>
