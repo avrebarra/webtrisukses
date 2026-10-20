@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { withBasePath } from "../../../utils/withBasePath";
 
 const IMAGES = [
-  { src: "/assets/gallery/item_1.jpg", alt: "Galeri proyek 1" },
-  { src: "/assets/gallery/item_2.jpg", alt: "Galeri proyek 2" },
-  { src: "/assets/gallery/item_3.jpg", alt: "Galeri proyek 3" },
-  { src: "/assets/gallery/item_4.jpg", alt: "Galeri proyek 4" },
-  { src: "/assets/gallery/item_5.jpg", alt: "Galeri proyek 5" },
-  { src: "/assets/gallery/item_6.jpg", alt: "Galeri proyek 6" },
-  { src: "/assets/gallery/item_7.jpg", alt: "Galeri proyek 7" },
-  { src: "/assets/gallery/item_8.jpg", alt: "Galeri proyek 8" },
+  { src: withBasePath("/assets/gallery/item_1.jpg"), alt: "Galeri proyek 1" },
+  { src: withBasePath("/assets/gallery/item_2.jpg"), alt: "Galeri proyek 2" },
+  { src: withBasePath("/assets/gallery/item_3.jpg"), alt: "Galeri proyek 3" },
+  { src: withBasePath("/assets/gallery/item_4.jpg"), alt: "Galeri proyek 4" },
+  { src: withBasePath("/assets/gallery/item_5.jpg"), alt: "Galeri proyek 5" },
+  { src: withBasePath("/assets/gallery/item_6.jpg"), alt: "Galeri proyek 6" },
+  { src: withBasePath("/assets/gallery/item_7.jpg"), alt: "Galeri proyek 7" },
+  { src: withBasePath("/assets/gallery/item_8.jpg"), alt: "Galeri proyek 8" },
 ];
 
 const Gallery = () => {

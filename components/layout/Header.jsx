@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import * as constants from "../../data/constants";
+import { withBasePath } from "../../utils/withBasePath";
 
 const NAV = [
   { href: "#hero", label: "Beranda" },
@@ -17,7 +18,7 @@ const Header = () => {
       <nav className="max-w-6xl mx-auto px-4 sm:px-8 flex items-center justify-between py-3">
         <a href="#hero" className="flex items-center shrink-0">
           <img
-            src="/assets/logo.png"
+            src={withBasePath("/assets/logo.png")}
             alt="CV Trisukses Bangun Karya"
             className="h-10 sm:h-12 w-auto object-contain"
           />

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import OverlayJasa from "./OverlayJasa";
 import * as constants from "../../../data/constants";
+import { withBasePath } from "../../../utils/withBasePath";
 
 const SUBMENU_JASA = {
   bangun: {
@@ -76,25 +77,25 @@ const CARDS = [
     key: "bangun",
     title: "Jasa Bangun Rumah",
     desc: "Rumah tinggal, ruko, rumah kos, hingga toko.",
-    img: "/assets/service_building.jpg",
+    img: withBasePath("/assets/service_building.jpg"),
   },
   {
     key: "renovasi",
     title: "Jasa Renovasi Rumah",
     desc: "Tambah ruangan, atap, plafon, pagar, dan lainnya.",
-    img: "/assets/service_renovation.jpg",
+    img: withBasePath("/assets/service_renovation.jpg"),
   },
   {
     key: "maintenance",
     title: "Jasa Building Maintenance",
     desc: "Service AC, instalasi CCTV, pasang kitchen set.",
-    img: "/assets/service_maintenance.jpg",
+    img: withBasePath("/assets/service_maintenance.jpg"),
   },
   {
     key: "interior",
     title: "Jasa Interior",
     desc: "Interior rumah, kantor, kafe, dan ruang usaha.",
-    img: "/assets/service_interior.jpg",
+    img: withBasePath("/assets/service_interior.jpg"),
   },
 ];
 

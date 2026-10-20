@@ -1,9 +1,12 @@
 import React from "react";
+import { withBasePath } from "../../../utils/withBasePath";
 
 const logos = Array.from(
   { length: 20 },
   (_, i) =>
-    `/assets/partners/partnerlogo-${i + 1}.${[3, 4, 9, 11, 15, 18].includes(i + 1) ? "png" : i + 1 === 7 || i + 1 === 10 ? "jpeg" : i + 1 === 20 ? "webp" : "jpg"}`
+    withBasePath(
+      `/assets/partners/partnerlogo-${i + 1}.${[3, 4, 9, 11, 15, 18].includes(i + 1) ? "png" : i + 1 === 7 || i + 1 === 10 ? "jpeg" : i + 1 === 20 ? "webp" : "jpg"}`
+    )
 );
 
 const Partners = () => {

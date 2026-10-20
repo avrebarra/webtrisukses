@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faTiktok, faInstagram, faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { withBasePath } from "../../utils/withBasePath";
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
         <div className="flex flex-col items-center sm:items-start">
           <a href="#hero" className="inline-flex items-center">
             <img
-              src="/assets/logo.png"
+              src={withBasePath("/assets/logo.png")}
               alt="CV Trisukses Bangun Karya"
               className="h-12 sm:h-14 w-auto brightness-0 invert"
             />

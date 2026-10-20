@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { withBasePath } from "../../utils/withBasePath";
 
 // Default value for some meta data
 const defaultMeta = {
@@ -78,38 +79,38 @@ const SEOHead = (props) => {
 const favicons = [
   {
     rel: "icon",
-    href: "/favicon.ico",
+    href: withBasePath("/favicon.ico"),
   },
   {
     rel: "icon",
-    href: "/favicon/favicon.ico",
+    href: withBasePath("/favicon/favicon.ico"),
   },
   {
     rel: "icon",
     type: "image/png",
-    href: "/favicon.png",
+    href: withBasePath("/favicon.png"),
   },
   {
     rel: "icon",
     type: "image/png",
     sizes: "16x16",
-    href: "/favicon/favicon-16x16.png",
+    href: withBasePath("/favicon/favicon-16x16.png"),
   },
   {
     rel: "icon",
     type: "image/png",
     sizes: "32x32",
-    href: "/favicon/favicon-32x32.png",
+    href: withBasePath("/favicon/favicon-32x32.png"),
   },
   {
     rel: "icon",
     type: "image/png",
     sizes: "96x96",
-    href: "/favicon/favicon-96x96.png",
+    href: withBasePath("/favicon/favicon-96x96.png"),
   },
   {
     rel: "manifest",
-    href: "/site.webmanifest",
+    href: withBasePath("/site.webmanifest"),
   },
 ];
 
