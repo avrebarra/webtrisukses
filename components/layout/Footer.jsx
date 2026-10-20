@@ -1,4 +1,7 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone, faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faTiktok, faInstagram, faFacebookF } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
@@ -19,9 +22,27 @@ const Footer = () => {
         <div className="text-center sm:text-left">
           <p className="font-semibold text-white mb-4">Kontak</p>
           <ul className="text-sm space-y-2 text-slate-400">
-            <li>📞 0822-5746-0176</li>
-            <li>✉️ tris.bangunkarya@gmail.com</li>
-            <li>📍 Jl Teluk Bayur RT02 RW01, Kelurahan Gebang, Sidoarjo, Jawa Timur</li>
+            <li className="flex items-start gap-2">
+              <FontAwesomeIcon
+                icon={faPhone}
+                className="w-3.5 h-3.5 mt-1 shrink-0 text-amber-400"
+              />
+              <span>0822-5746-0176</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                className="w-3.5 h-3.5 mt-1 shrink-0 text-amber-400"
+              />
+              <span>tris.bangunkarya@gmail.com</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <FontAwesomeIcon
+                icon={faLocationDot}
+                className="w-3.5 h-3.5 mt-1 shrink-0 text-amber-400"
+              />
+              <span>Jl Teluk Bayur RT02 RW01, Kelurahan Gebang, Sidoarjo, Jawa Timur</span>
+            </li>
           </ul>
         </div>
         <div className="text-center sm:text-left">
@@ -57,8 +78,9 @@ const Footer = () => {
                 href="https://www.tiktok.com/@trisbangunkarya"
                 target="_blank"
                 rel="noopener"
-                className="hover:text-amber-400 transition-colors"
+                className="inline-flex items-center gap-2 hover:text-amber-400 transition-colors"
               >
+                <FontAwesomeIcon icon={faTiktok} className="w-3.5 h-3.5 shrink-0" />
                 TikTok
               </a>
             </li>
@@ -67,8 +89,9 @@ const Footer = () => {
                 href="https://www.instagram.com/jasabangunrenovasisidoarjo"
                 target="_blank"
                 rel="noopener"
-                className="hover:text-amber-400 transition-colors"
+                className="inline-flex items-center gap-2 hover:text-amber-400 transition-colors"
               >
+                <FontAwesomeIcon icon={faInstagram} className="w-3.5 h-3.5 shrink-0" />
                 Instagram Sidoarjo
               </a>
             </li>
@@ -77,8 +100,9 @@ const Footer = () => {
                 href="https://www.instagram.com/jasabangunrenovasipasuruan"
                 target="_blank"
                 rel="noopener"
-                className="hover:text-amber-400 transition-colors"
+                className="inline-flex items-center gap-2 hover:text-amber-400 transition-colors"
               >
+                <FontAwesomeIcon icon={faInstagram} className="w-3.5 h-3.5 shrink-0" />
                 Instagram Pasuruan
               </a>
             </li>
@@ -87,8 +111,9 @@ const Footer = () => {
                 href="https://www.facebook.com/profile.php?id=100095340162994"
                 target="_blank"
                 rel="noopener"
-                className="hover:text-amber-400 transition-colors"
+                className="inline-flex items-center gap-2 hover:text-amber-400 transition-colors"
               >
+                <FontAwesomeIcon icon={faFacebookF} className="w-3.5 h-3.5 shrink-0" />
                 Facebook
               </a>
             </li>
