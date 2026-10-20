@@ -69,7 +69,7 @@ const SEOHead = (props) => {
         <link key={linkProps.href} {...linkProps} />
       ))}
       {/* Accent color on supported browser */}
-      <meta name="theme-color" content="#F53838" />
+      <meta name="theme-color" content="#fbbf24" />
     </Head>
   );
 };

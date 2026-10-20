@@ -1,46 +1,28 @@
 import React from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import useScrollAnimation from "../../../hooks/useScrollAnimation";
-import ScrollAnimationWrapper from "../../ui/ScrollAnimationWrapper";
+
+const logos = Array.from({ length: 20 }, (_, i) => `/assets/partners/partnerlogo-${i + 1}.${[3,4,9,11,15,18].includes(i+1) ? "png" : (i+1===7||i+1===10 ? "jpeg" : (i+1===20 ? "webp" : "jpg"))}`);
 
 const Partners = () => {
-  const scrollAnimation = useScrollAnimation();
-
   return (
-    <div className="w-full">
-      <div className="max-w-screen-xl sm:mt-14 sm:mb-14 px-6 sm:px-8 lg:px-16 mx-auto" id="feature">
-        <div className="text-center">
-          <ScrollAnimationWrapper>
-            <motion.h3 variants={scrollAnimation} className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed">
-              Partner Kami
-            </motion.h3>
-          </ScrollAnimationWrapper>
-        </div>
-        <div className="py-12 w-full flex gap-6 flex-wrap justify-center">
-          <img className="h-16" src={"/assets/partners/partnerlogo-1.jpg"} />
-          <img className="h-16" src={"/assets/partners/partnerlogo-2.jpg"} />
-          <img className="h-16" src={"/assets/partners/partnerlogo-3.png"} />
-          <img className="h-16" src={"/assets/partners/partnerlogo-4.png"} />
-          <img className="h-16" src={"/assets/partners/partnerlogo-5.jpg"} />
-          <img className="h-16" src={"/assets/partners/partnerlogo-6.jpg"} />
-          <img className="h-16" src={"/assets/partners/partnerlogo-7.jpeg"} />
-          <img className="h-16" src={"/assets/partners/partnerlogo-8.jpg"} />
-          <img className="h-16" src={"/assets/partners/partnerlogo-9.png"} />
-          <img className="h-16" src={"/assets/partners/partnerlogo-10.jpeg"} />
-          <img className="h-16" src={"/assets/partners/partnerlogo-11.png"} />
-          <img className="h-16" src={"/assets/partners/partnerlogo-12.jpg"} />
-          <img className="h-16" src={"/assets/partners/partnerlogo-13.jpg"} />
-          <img className="h-16" src={"/assets/partners/partnerlogo-14.jpg"} />
-          <img className="h-16" src={"/assets/partners/partnerlogo-15.png"} />
-          <img className="h-16" src={"/assets/partners/partnerlogo-16.jpg"} />
-          <img className="h-16" src={"/assets/partners/partnerlogo-17.jpg"} />
-          <img className="h-16" src={"/assets/partners/partnerlogo-18.png"} />
-          <img className="h-16" src={"/assets/partners/partnerlogo-19.jpg"} />
-          <img className="h-16" src={"/assets/partners/partnerlogo-20.webp"} />
-        </div>
+    <section id="partner" className="max-w-6xl mx-auto px-4 sm:px-8 py-16 sm:py-24">
+      <div className="text-center">
+        <p className="text-amber-500 font-semibold text-sm uppercase tracking-widest">Partner</p>
+        <h2 className="text-3xl sm:text-4xl font-extrabold mt-2">Partner Kami</h2>
       </div>
-    </div>
+      <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 mt-12">
+        {logos.map((src, i) => (
+          <div key={src} className="h-20 rounded-md bg-white border border-slate-100 flex items-center justify-center p-2 overflow-hidden">
+            <img
+              src={src}
+              alt={`Partner ${i + 1}`}
+              className="max-h-14 max-w-full object-contain"
+              onError={(e) => { e.currentTarget.style.display = "none"; e.currentTarget.nextSibling && (e.currentTarget.nextSibling.style.display = "flex"); }}
+            />
+            <span className="hidden text-slate-400 text-xs font-medium">Logo Partner</span>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 

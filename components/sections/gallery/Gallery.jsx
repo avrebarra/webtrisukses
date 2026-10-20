@@ -1,129 +1,91 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-// import react slick
-import Slider from "react-slick";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import ArrowBack from "../../../public/assets/Icon/eva_arrow-back-fill.svg";
-import ArrowNext from "../../../public/assets/Icon/eva_arrow-next-fill.svg";
-import * as constants from "../../../data/constants";
-import useScrollAnimation from "../../../hooks/useScrollAnimation";
-import ScrollAnimationWrapper from "../../ui/ScrollAnimationWrapper";
+const IMAGES = [
+  { src: "/assets/gallery/item_1.jpg", alt: "Galeri proyek 1" },
+  { src: "/assets/gallery/item_2.jpg", alt: "Galeri proyek 2" },
+  { src: "/assets/gallery/item_3.jpg", alt: "Galeri proyek 3" },
+  { src: "/assets/gallery/item_4.jpg", alt: "Galeri proyek 4" },
+  { src: "/assets/gallery/item_5.jpg", alt: "Galeri proyek 5" },
+  { src: "/assets/gallery/item_6.jpg", alt: "Galeri proyek 6" },
+  { src: "/assets/gallery/item_7.jpg", alt: "Galeri proyek 7" },
+  { src: "/assets/gallery/item_8.jpg", alt: "Galeri proyek 8" },
+];
 
-const Gallery = ({
-  listTestimoni: listImages = [
-    { image: "/assets/gallery/item_1.jpg" },
-    { image: "/assets/gallery/item_2.jpg" },
-    { image: "/assets/gallery/item_4.jpg" },
-    { image: "/assets/gallery/item_3.jpg" },
-    { image: "/assets/gallery/item_5.jpg" },
-    { image: "/assets/gallery/item_6.jpg" },
-    { image: "/assets/gallery/item_7.jpg" },
-    { image: "/assets/gallery/item_8.jpg" },
-    { image: "/assets/gallery/item_9.jpg" },
-    { image: "/assets/gallery/item_10.jpg" },
-    { image: "/assets/gallery/item_11.jpg" },
-    { image: "/assets/gallery/item_12.jpg" },
-    { image: "/assets/gallery/item_13.jpg" },
-    { image: "/assets/gallery/item_14.jpg" },
-    { image: "/assets/gallery/item_15.jpg" },
-    { image: "/assets/gallery/item_16.jpg" },
-    { image: "/assets/gallery/item_17.jpg" },
-    { image: "/assets/gallery/item_18.jpg" },
-    { image: "/assets/gallery/item_19.jpg" },
-    { image: "/assets/gallery/item_20.jpg" },
-    { image: "/assets/gallery/item_23.jpg" },
-    { image: "/assets/gallery/item_24.jpg" },
-    { image: "/assets/gallery/item_25.jpg" },
-    { image: "/assets/gallery/item_26.jpg" },
-    { image: "/assets/gallery/item_27.jpg" },
-    { image: "/assets/gallery/item_28.jpg" },
-  ],
-}) => {
-  const settings = {
-    dots: true,
-    customPaging: function (i) {
-      return (
-        <a className="">
-          <span className="mx-2 rounded-l-full rounded-r-full h-4 w-4 block cursor-pointer transition-all "></span>
-        </a>
-      );
-    },
-    // dotsClass: "slick-dots w-max absolute mt-20  ",
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 2,
-    responsive: [
-      {
-        breakpoint: 770,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+const Gallery = () => {
+  const [active, setActive] = useState(null);
 
-  const [sliderRef, setSliderRef] = useState(null);
-  const scrollAnimation = useScrollAnimation();
+  const open = (i) => setActive(i);
+  const close = () => setActive(null);
+  const nav = (d) => setActive((v) => (v + d + IMAGES.length) % IMAGES.length);
+
+  useEffect(() => {
+    if (active === null) {
+      document.body.style.overflow = "";
+      return;
+    }
+    document.body.style.overflow = "hidden";
+    const onKey = (e) => {
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") nav(-1);
+      if (e.key === "ArrowRight") nav(1);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [active]);
 
   return (
     <>
-      <div className="bg-gradient-to-b from-white-300 to-slate-100 w-full py-14" id="galeri">
-        <div className="max-w-screen-xl  px-6 sm:px-8 lg:px-16 mx-auto flex flex-col w-full text-center justify-center">
-          <div className="flex flex-col w-full">
-            <ScrollAnimationWrapper>
-              <motion.h3
-                variants={scrollAnimation}
-                className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-normal w-9/12 sm: lg:w-4/12 mx-auto"
-              >
-                Galeri Pekerjaan Kami{" "}
-              </motion.h3>
-              <motion.p variants={scrollAnimation} className="leading-normal mx-auto mb-2 mt-4 w-10/12 sm:w-7/12 lg:w-6/12">
-                Inilah cerita-cerita kami bersama pelanggan yang bergabung dengan senang hati ketika menggunakan layanan luar biasa kami.
-              </motion.p>
-            </ScrollAnimationWrapper>
-            <ScrollAnimationWrapper className="w-full flex flex-col py-12">
-              <motion.div variants={scrollAnimation}>
-                <Slider {...settings} arrows={false} ref={setSliderRef} className="flex items-stretch justify-items-stretch">
-                  {listImages.map((listTestimonis, index) => (
-                    <div className="px-1 flex items-stretch" key={index}>
-                      <div className="border-2 border-slate-100 hover:border-yellow-500 transition-all flex mb-5">
-                        <Image src={listTestimonis.image} height={500} width={500} style={{ "object-fit": "cover" }} alt="Icon People" />
-                      </div>
-                    </div>
-                  ))}
-                </Slider>
-                <div className="flex w-full items-center justify-end">
-                  <div className="flex flex-none justify-between w-auto mt-14">
-                    <div
-                      className="mx-4 flex items-center justify-center h-14 w-14 rounded-full bg-white border-yellow-500 border hover:bg-yellow-500 hover:text-slate-900 transition-all text-yellow-500 cursor-pointer"
-                      onClick={sliderRef?.slickPrev}
-                    >
-                      <ArrowBack className="h-6 w-6 " />
-                    </div>
-                    <div
-                      className="flex items-center justify-center h-14 w-14 rounded-full bg-white border-yellow-500 border hover:bg-yellow-500 hover:text-slate-900 transition-all text-yellow-500 cursor-pointer"
-                      onClick={sliderRef?.slickNext}
-                    >
-                      <ArrowNext className="h-6 w-6" />
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </ScrollAnimationWrapper>
+      <section id="galeri" className="bg-slate-50 py-16 sm:py-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="text-amber-500 font-semibold text-sm uppercase tracking-widest">Galeri</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mt-2">Galeri Pekerjaan Kami</h2>
+            <p className="text-slate-600 mt-4 leading-relaxed">Cerita kami bersama pelanggan yang puas menggunakan layanan kami.</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+            {IMAGES.map((im, i) => (
+              <img
+                key={im.src}
+                src={im.src}
+                alt={im.alt}
+                onClick={() => open(i)}
+                onKeyDown={(e) => { if (e.key === "Enter") open(i); }}
+                tabIndex={0}
+                className="rounded-md w-full h-44 object-cover cursor-pointer hover:opacity-90 transition-opacity"
+              />
+            ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {active !== null && (
+        <div className="fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm p-4 sm:p-8 flex flex-col items-center justify-center" onClick={(e) => { if (e.target === e.currentTarget) close(); }}>
+          <button onClick={close} className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 text-white flex items-center justify-center backdrop-blur-sm transition-colors" aria-label="Tutup">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+          <div className="absolute inset-0 pointer-events-none hidden sm:flex items-center justify-between px-4 sm:px-6">
+            <button onClick={() => nav(-1)} className="pointer-events-auto w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 text-white flex items-center justify-center backdrop-blur-sm transition-colors" aria-label="Sebelumnya">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button onClick={() => nav(1)} className="pointer-events-auto w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 text-white flex items-center justify-center backdrop-blur-sm transition-colors" aria-label="Berikutnya">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          <div className="absolute bottom-6 right-6 flex sm:hidden gap-3">
+            <button onClick={() => nav(-1)} className="w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 text-white flex items-center justify-center backdrop-blur-sm transition-colors" aria-label="Sebelumnya">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button onClick={() => nav(1)} className="w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 text-white flex items-center justify-center backdrop-blur-sm transition-colors" aria-label="Berikutnya">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+          <img src={IMAGES[active].src} alt={IMAGES[active].alt} className="w-full sm:w-auto max-w-[92vw] sm:max-w-4xl max-h-[75vh] sm:max-h-[80vh] object-contain rounded-md shadow-2xl" />
+          <p className="text-center text-white/80 text-sm mt-4">{IMAGES[active].alt}</p>
+        </div>
+      )}
     </>
   );
 };
