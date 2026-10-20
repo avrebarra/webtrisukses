@@ -2,36 +2,29 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { withBasePath } from "../../utils/withBasePath";
 
-// Default value for some meta data
+// site url - override via NEXT_PUBLIC_SITE_URL for staging/preview
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://renovasirumahbangunan.com").replace(
+  /\/$/,
+  ""
+);
+const OG_IMAGE_DEFAULT = `${SITE_URL}/assets/service_building.jpg`;
+
 const defaultMeta = {
-  title: "Trisukses Bangun Karya",
+  title: "Trisukses Bangun Karya - Kontraktor Bangun & Renovasi Rumah Sidoarjo & Pasuruan",
   siteName: "Trisukses Bangun Karya",
-  description: "Wujudkan Hunian Impian Anda Bersama Kami!",
-  // change base url of your web (without '/' at the end)
-  url: "Trisukses Bangun Karya.com",
+  description:
+    "Kontraktor bangun & renovasi rumah di Sidoarjo & Pasuruan - gratis survey, desain & RAB. Garansi pengerjaan, pembayaran bertahap. Wujudkan hunian impian bersama CV Trisukses Bangun Karya.",
+  url: SITE_URL,
   type: "website",
   robots: "follow, index",
-  // change with url of your image (recommended dimension = 1.91:1)
-  // used in twitter, facebook, etc. card when link copied in tweet/status
-  author: "Lorem Ipsum",
+  image: OG_IMAGE_DEFAULT,
+  imageAlt: "Proyek bangun & renovasi rumah - CV Trisukses Bangun Karya, Sidoarjo Pasuruan",
+  locale: "id_ID",
+  author: "CV Trisukses Bangun Karya",
 };
 
 /**
  * Next Head component populated with necessary SEO tags and title
- * props field used:
- * - title
- * - siteName
- * - description
- * - url
- * - type
- * - robots
- * - image
- * - date
- * - author
- * - templateTitle
- * all field are optional (default value defined on defaultMeta)
- * @example
- * <SeoHead title="Page's Title" />
  */
 const SEOHead = (props) => {
   const router = useRouter();
@@ -40,24 +33,36 @@ const SEOHead = (props) => {
     ...props,
   };
 
-  // Use siteName if there is templateTitle
-  // but show full title if there is none
   meta.title = props.templateTitle ? `${props.templateTitle} | ${meta.siteName}` : meta.title;
+
+  const canonicalUrl = `${meta.url}${router.asPath === "/" ? "/" : router.asPath.split("?")[0]}`;
+  const ogImage = meta.image || OG_IMAGE_DEFAULT;
 
   return (
     <Head>
       <title>{meta.title}</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="robots" content={meta.robots} />
       <meta content={meta.description} name="description" />
-      <meta property="og:url" content={`${meta.url}${router.asPath}`} />
-      <link rel="canonical" href={`${meta.url}${router.asPath}`} />
+      <meta name="author" content={meta.author} />
+      <link rel="canonical" href={canonicalUrl} />
       {/* Open Graph */}
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content={meta.type} />
       <meta property="og:site_name" content={meta.siteName} />
       <meta property="og:description" content={meta.description} />
       <meta property="og:title" content={meta.title} />
-      <meta name="image" property="og:image" content={meta.image} />
+      <meta property="og:locale" content={meta.locale} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={meta.imageAlt} />
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={meta.title} />
+      <meta name="twitter:description" content={meta.description} />
+      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image:alt" content={meta.imageAlt} />
       {meta.date && (
         <>
           <meta property="article:published_time" content={meta.date} />
@@ -69,13 +74,11 @@ const SEOHead = (props) => {
       {favicons.map((linkProps) => (
         <link key={linkProps.href} {...linkProps} />
       ))}
-      {/* Accent color on supported browser */}
       <meta name="theme-color" content="#fbbf24" />
     </Head>
   );
 };
 
-// Favicons, other icons, and manifest definition
 const favicons = [
   {
     rel: "icon",

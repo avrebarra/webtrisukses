@@ -14,6 +14,10 @@ const Footer = () => {
               src={withBasePath("/assets/logo.png")}
               alt="CV Trisukses Bangun Karya"
               className="h-12 sm:h-14 w-auto brightness-0 invert"
+              width="160"
+              height="56"
+              loading="lazy"
+              decoding="async"
             />
           </a>
           <p className="text-sm leading-relaxed mt-4 text-slate-400">
@@ -53,7 +57,7 @@ const Footer = () => {
               <a
                 href="https://www.tiktok.com/@trisbangunkarya"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 hover:text-amber-400 transition-colors"
               >
                 <FontAwesomeIcon icon={faTiktok} className="w-3.5 h-3.5 shrink-0" />
@@ -64,7 +68,7 @@ const Footer = () => {
               <a
                 href="https://www.instagram.com/jasabangunrenovasisidoarjo"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 hover:text-amber-400 transition-colors"
               >
                 <FontAwesomeIcon icon={faInstagram} className="w-3.5 h-3.5 shrink-0" />
@@ -75,7 +79,7 @@ const Footer = () => {
               <a
                 href="https://www.instagram.com/jasabangunrenovasipasuruan"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 hover:text-amber-400 transition-colors"
               >
                 <FontAwesomeIcon icon={faInstagram} className="w-3.5 h-3.5 shrink-0" />
@@ -86,7 +90,7 @@ const Footer = () => {
               <a
                 href="https://www.facebook.com/profile.php?id=100095340162994"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 hover:text-amber-400 transition-colors"
               >
                 <FontAwesomeIcon icon={faFacebookF} className="w-3.5 h-3.5 shrink-0" />
@@ -103,7 +107,7 @@ const Footer = () => {
         <a
           href="https://avrebarra.github.io"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-1 bg-white text-slate-900 px-5 py-2.5 rounded-md text-xs leading-none hover:bg-slate-100 transition-colors"
         >
           <span className="font-normal">This website is crafted by</span>{" "}

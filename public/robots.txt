@@ -1,0 +1,6 @@
+# robots.txt for renovasirumahbangunan.com
+User-agent: *
+Allow: /
+
+# sitemap
+Sitemap: https://renovasirumahbangunan.com/sitemap.xml

@@ -11,8 +11,13 @@ const Hero = () => {
           <div className="order-1 sm:order-2 sm:col-span-7 relative h-[260px] sm:h-auto min-h-[260px] sm:min-h-[520px] overflow-hidden bg-slate-200">
             <img
               src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=70"
-              alt="Proyek konstruksi Trisukses Bangun Karya"
+              alt="Proyek pembangunan rumah - kontraktor Trisukses Bangun Karya Sidoarjo Pasuruan"
               className="absolute inset-0 w-full h-full object-cover block"
+              width="1200"
+              height="800"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
             />
             <div className="absolute right-0 bottom-4 sm:bottom-auto sm:top-6 flex flex-col gap-3">
               <div className="bg-white/30 backdrop-blur-md text-white rounded-l px-5 sm:px-6 py-4 sm:py-5 shadow-lg">
@@ -42,7 +47,7 @@ const Hero = () => {
               <a
                 href={constants.WHATSAPP_MESSAGES.GENERAL}
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 className="w-full lg:w-auto text-center whitespace-nowrap bg-amber-400 hover:bg-amber-300 text-sm font-semibold px-5 lg:px-6 py-3.5 rounded shadow-md shadow-amber-400/30 transition-all flex items-center justify-center gap-2"
               >
                 <FontAwesomeIcon
@@ -73,7 +78,7 @@ const Hero = () => {
         <a
           href={constants.WHATSAPP_MESSAGES.GENERAL}
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           aria-label="Hubungi via WhatsApp"
           className="shrink-0 w-10 h-10 rounded-full bg-amber-400 hover:bg-amber-300 flex items-center justify-center text-slate-900 transition-colors"
         >
