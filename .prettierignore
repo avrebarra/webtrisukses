@@ -1,0 +1,11 @@
+.next
+out
+node_modules
+package-lock.json
+.next
+dist
+build
+coverage
+.epiq
+.git
+docs/mockup-landing.html

@@ -21,6 +21,9 @@ COMMANDS = {
   %w[dev]               => c("Start dev server (next dev)") { run "npm run dev" },
   %w[build]             => c("Build static export") { build_export },
   %w[clean]             => c("Clean out/ and .next/") { run "rm -rf out .next" },
+  %w[lint]              => c("Check formatting with Prettier (all files incl. markdown)") { lint_check },
+  %w[lint:fix]          => c("Fix formatting with Prettier (all files incl. markdown)") { lint_fix },
+  %w[lint fix]          => c(nil) { lint_fix },
   %w[audit]             => c("Run npm audit") { audit_summary },
   %w[verify]            => c("Full verify: node, config, workflow, build, out/, audit") { verify_all },
   %w[toolchain verify]  => c("Alias of verify") { verify_all },
@@ -107,6 +110,16 @@ def build_export
   end
   puts "  build ok ✓"
   true
+end
+
+def lint_check
+  puts ">>> prettier --check ."
+  run "npx prettier --check ."
+end
+
+def lint_fix
+  puts ">>> prettier --write ."
+  run "npx prettier --write ."
 end
 
 def audit_summary
