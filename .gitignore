@@ -33,3 +33,7 @@ yarn-error.log*
 # vercel
 .vercel
 .vscode
+
+# [epiq]: local hydrated state is never committed
+.epiq/events/
+.epiq/log/
