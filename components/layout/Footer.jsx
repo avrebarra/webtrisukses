@@ -3,8 +3,8 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="bg-slate-900 text-slate-300 pt-16 pb-8">
-      <div className="max-w-6xl mx-auto px-4 sm:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-        <div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center sm:text-left">
+        <div className="flex flex-col items-center sm:items-start">
           <a href="#hero" className="inline-flex items-center">
             <img
               src="/assets/logo.png"
@@ -16,7 +16,7 @@ const Footer = () => {
             Jasa bangun rumah dan renovasi dengan track record bintang lima.
           </p>
         </div>
-        <div>
+        <div className="text-center sm:text-left">
           <p className="font-semibold text-white mb-4">Kontak</p>
           <ul className="text-sm space-y-2 text-slate-400">
             <li>📞 0822-5746-0176</li>
@@ -24,7 +24,7 @@ const Footer = () => {
             <li>📍 Jl Teluk Bayur RT02 RW01, Kelurahan Gebang, Sidoarjo, Jawa Timur</li>
           </ul>
         </div>
-        <div>
+        <div className="text-center sm:text-left">
           <p className="font-semibold text-white mb-4">Layanan &amp; Jasa</p>
           <ul className="text-sm space-y-2 text-slate-400">
             <li>
@@ -49,7 +49,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="text-center sm:text-left">
           <p className="font-semibold text-white mb-4">Ikuti Kami</p>
           <ul className="text-sm space-y-2 text-slate-400">
             <li>
@@ -96,7 +96,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-8 mt-12 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
-        <span>
+        <span className="text-center sm:text-left">
           © {new Date().getFullYear()} CV Trisukses Bangun Karya. Seluruh hak cipta dilindungi.
         </span>
         <a
