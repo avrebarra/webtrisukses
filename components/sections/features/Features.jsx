@@ -1,36 +1,129 @@
 import React from "react";
 
 const cards = [
-  { title: "GRATIS Survey Lokasi", desc: "Survei mendalam oleh tim ahli kami untuk perencanaan proyek yang presisi sejak awal.", icon: "pin" },
-  { title: "GRATIS Konsultasi", desc: "Panduan konstruksi langkah demi langkah, dari konsep sampai rencana kerja jelas.", icon: "chat" },
-  { title: "GRATIS Desain*", desc: "Tim kreatif kami merancang visi Anda menjadi kenyataan, tanpa biaya tambahan.", note: "*) syarat dan ketentuan berlaku", icon: "doc" },
-  { title: "GRATIS RAB", desc: "Rencana anggaran yang cermat dan detail, supaya tidak ada kejutan biaya di tengah jalan.", icon: "list" },
-  { title: "Garansi Pengerjaan", desc: "Perlindungan atas kualitas dan kepuasan Anda selama proses pelaksanaan proyek.", icon: "shield" },
-  { title: "Pembayaran Bertahap", desc: "Fleksibel, mengikuti perkembangan dan pencapaian tiap fase pekerjaan.", icon: "calendar" },
+  {
+    title: "GRATIS Survey Lokasi",
+    desc: "Survei mendalam oleh tim ahli kami untuk perencanaan proyek yang presisi sejak awal.",
+    icon: "pin",
+  },
+  {
+    title: "GRATIS Konsultasi",
+    desc: "Panduan konstruksi langkah demi langkah, dari konsep sampai rencana kerja jelas.",
+    icon: "chat",
+  },
+  {
+    title: "GRATIS Desain*",
+    desc: "Tim kreatif kami merancang visi Anda menjadi kenyataan, tanpa biaya tambahan.",
+    note: "*) syarat dan ketentuan berlaku",
+    icon: "doc",
+  },
+  {
+    title: "GRATIS RAB",
+    desc: "Rencana anggaran yang cermat dan detail, supaya tidak ada kejutan biaya di tengah jalan.",
+    icon: "list",
+  },
+  {
+    title: "Garansi Pengerjaan",
+    desc: "Perlindungan atas kualitas dan kepuasan Anda selama proses pelaksanaan proyek.",
+    icon: "shield",
+  },
+  {
+    title: "Pembayaran Bertahap",
+    desc: "Fleksibel, mengikuti perkembangan dan pencapaian tiap fase pekerjaan.",
+    icon: "calendar",
+  },
 ];
 
 function Icon({ name }) {
   const cls = "w-6 h-6 text-amber-600";
-  if (name === "pin") return <svg className={cls} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 11a3 3 0 100-6 3 3 0 000 6z"/><path strokeLinecap="round" strokeLinejoin="round" d="M12 22s7-6.5 7-11a7 7 0 10-14 0c0 4.5 7 11 7 11z"/></svg>;
-  if (name === "chat") return <svg className={cls} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 10h8M8 14h5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>;
-  if (name === "doc") return <svg className={cls} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M7 21a2 2 0 01-2-2V5a2 2 0 012-2h9l5 5v11a2 2 0 01-2 2H7z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 3v6h6"/></svg>;
-  if (name === "list") return <svg className={cls} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 7h6M9 11h6M9 15h6M5 5a2 2 0 012-2h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5z"/></svg>;
-  if (name === "shield") return <svg className={cls} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4"/></svg>;
-  return <svg className={cls} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3M3 11h18M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>;
+  if (name === "pin")
+    return (
+      <svg className={cls} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 11a3 3 0 100-6 3 3 0 000 6z" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M12 22s7-6.5 7-11a7 7 0 10-14 0c0 4.5 7 11 7 11z"
+        />
+      </svg>
+    );
+  if (name === "chat")
+    return (
+      <svg className={cls} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M8 10h8M8 14h5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+    );
+  if (name === "doc")
+    return (
+      <svg className={cls} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M7 21a2 2 0 01-2-2V5a2 2 0 012-2h9l5 5v11a2 2 0 01-2 2H7z"
+        />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 3v6h6" />
+      </svg>
+    );
+  if (name === "list")
+    return (
+      <svg className={cls} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9 7h6M9 11h6M9 15h6M5 5a2 2 0 012-2h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5z"
+        />
+      </svg>
+    );
+  if (name === "shield")
+    return (
+      <svg className={cls} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+        />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
+      </svg>
+    );
+  return (
+    <svg className={cls} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M8 7V3m8 4V3M3 11h18M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+      />
+    </svg>
+  );
 }
 
 const Feature = () => {
   return (
     <section id="keunggulan" className="max-w-6xl mx-auto px-4 sm:px-8 py-16 sm:py-24">
       <div className="text-center max-w-2xl mx-auto">
-        <p className="text-amber-500 font-semibold text-sm uppercase tracking-widest">Keunggulan Kami</p>
-        <h2 className="text-3xl sm:text-4xl font-extrabold mt-2">Banyak layanan <span className="text-amber-500">GRATIS</span>, dari kami untuk Anda.</h2>
-        <p className="text-slate-600 mt-4 leading-relaxed">Mulai dari survei sampai serah terima, ada beberapa layanan gratis (dengan syarat dan ketentuan) yang bisa Anda dapatkan saat pembangunan.</p>
+        <p className="text-amber-500 font-semibold text-sm uppercase tracking-widest">
+          Keunggulan Kami
+        </p>
+        <h2 className="text-3xl sm:text-4xl font-extrabold mt-2">
+          Banyak layanan <span className="text-amber-500">GRATIS</span>, dari kami untuk Anda.
+        </h2>
+        <p className="text-slate-600 mt-4 leading-relaxed">
+          Mulai dari survei sampai serah terima, ada beberapa layanan gratis (dengan syarat dan
+          ketentuan) yang bisa Anda dapatkan saat pembangunan.
+        </p>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 lg:max-w-5xl lg:mx-auto">
         {cards.map((c) => (
-          <div key={c.title} className="rounded-md border border-slate-100 shadow-sm p-7 hover:shadow-md transition-shadow lg:aspect-square flex flex-col">
-            <div className="w-12 h-12 rounded-md bg-amber-100 flex items-center justify-center"><Icon name={c.icon} /></div>
+          <div
+            key={c.title}
+            className="rounded-md border border-slate-100 shadow-sm p-7 hover:shadow-md transition-shadow lg:aspect-square flex flex-col"
+          >
+            <div className="w-12 h-12 rounded-md bg-amber-100 flex items-center justify-center">
+              <Icon name={c.icon} />
+            </div>
             <h3 className="font-bold text-lg mt-5">{c.title}</h3>
             <p className="text-slate-600 text-sm leading-relaxed mt-2">{c.desc}</p>
             {c.note && <p className="text-xs italic text-slate-400 mt-3">{c.note}</p>}

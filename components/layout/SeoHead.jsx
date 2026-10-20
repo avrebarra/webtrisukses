@@ -78,7 +78,16 @@ const SEOHead = (props) => {
 const favicons = [
   {
     rel: "icon",
+    href: "/favicon.ico",
+  },
+  {
+    rel: "icon",
     href: "/favicon/favicon.ico",
+  },
+  {
+    rel: "icon",
+    type: "image/png",
+    href: "/favicon.png",
   },
   {
     rel: "icon",

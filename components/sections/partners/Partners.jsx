@@ -1,6 +1,10 @@
 import React from "react";
 
-const logos = Array.from({ length: 20 }, (_, i) => `/assets/partners/partnerlogo-${i + 1}.${[3,4,9,11,15,18].includes(i+1) ? "png" : (i+1===7||i+1===10 ? "jpeg" : (i+1===20 ? "webp" : "jpg"))}`);
+const logos = Array.from(
+  { length: 20 },
+  (_, i) =>
+    `/assets/partners/partnerlogo-${i + 1}.${[3, 4, 9, 11, 15, 18].includes(i + 1) ? "png" : i + 1 === 7 || i + 1 === 10 ? "jpeg" : i + 1 === 20 ? "webp" : "jpg"}`
+);
 
 const Partners = () => {
   return (
@@ -11,12 +15,18 @@ const Partners = () => {
       </div>
       <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 mt-12">
         {logos.map((src, i) => (
-          <div key={src} className="h-20 rounded-md bg-white border border-slate-100 flex items-center justify-center p-2 overflow-hidden">
+          <div
+            key={src}
+            className="h-20 rounded-md bg-white border border-slate-100 flex items-center justify-center p-2 overflow-hidden"
+          >
             <img
               src={src}
               alt={`Partner ${i + 1}`}
               className="max-h-14 max-w-full object-contain"
-              onError={(e) => { e.currentTarget.style.display = "none"; e.currentTarget.nextSibling && (e.currentTarget.nextSibling.style.display = "flex"); }}
+              onError={(e) => {
+                e.currentTarget.style.display = "none";
+                e.currentTarget.nextSibling && (e.currentTarget.nextSibling.style.display = "flex");
+              }}
             />
             <span className="hidden text-slate-400 text-xs font-medium">Logo Partner</span>
           </div>

@@ -24,11 +24,16 @@ const Hero = () => {
           </div>
           <div className="order-2 sm:order-1 sm:col-span-5 flex flex-col justify-center px-6 sm:px-8 lg:px-10 py-10 sm:py-10">
             <h1 className="leading-[1.15] tracking-tight text-slate-900">
-              <span className="block text-lg sm:text-xl lg:text-2xl font-semibold">Trisukses Bangun Karya</span>
-              <span className="block text-4xl lg:text-5xl mt-1 font-extrabold">Kontraktor jasa bangun dan renovasi rumah terbaik.</span>
+              <span className="block text-lg sm:text-xl lg:text-2xl font-semibold">
+                Trisukses Bangun Karya
+              </span>
+              <span className="block text-4xl lg:text-5xl mt-1 font-extrabold">
+                Kontraktor jasa bangun dan renovasi rumah terbaik.
+              </span>
             </h1>
             <p className="text-slate-500 text-sm lg:text-[0.95rem] mt-5 leading-relaxed">
-              Dengan tim profesional kami, wujudkan hunian impian Anda dengan detail yang tertata rapi di setiap tahapnya.
+              Dengan tim profesional kami, wujudkan hunian impian Anda dengan detail yang tertata
+              rapi di setiap tahapnya.
             </p>
             <div className="flex flex-col lg:flex-row gap-3 mt-7">
               <a
@@ -50,10 +55,24 @@ const Hero = () => {
       <div className="max-w-6xl mx-auto mt-4 bg-white/95 backdrop-blur rounded-md px-5 py-3 flex items-center justify-between gap-4 sm:gap-6 shadow-sm">
         <div>
           <p className="font-semibold text-slate-900 text-sm">Masih ragu mau mulai dari mana?</p>
-          <p className="text-xs sm:text-sm text-slate-600 leading-snug mt-1">Konsultasi gratis dengan tim kami, kami bantu petakan langkah awal yang paling pas untuk kebutuhan Anda.</p>
+          <p className="text-xs sm:text-sm text-slate-600 leading-snug mt-1">
+            Konsultasi gratis dengan tim kami, kami bantu petakan langkah awal yang paling pas untuk
+            kebutuhan Anda.
+          </p>
         </div>
-        <a href="https://api.whatsapp.com/send?phone=6282257460176" className="shrink-0 w-10 h-10 rounded-full bg-amber-400 hover:bg-amber-300 flex items-center justify-center text-slate-900 transition-colors">
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7-7 7M21 12H3" /></svg>
+        <a
+          href="https://api.whatsapp.com/send?phone=6282257460176"
+          className="shrink-0 w-10 h-10 rounded-full bg-amber-400 hover:bg-amber-300 flex items-center justify-center text-slate-900 transition-colors"
+        >
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7-7 7M21 12H3" />
+          </svg>
         </a>
       </div>
     </section>
