@@ -142,8 +142,12 @@ const Jasa = () => {
           >
             <img
               src={c.img}
-              alt={c.title}
+              alt={`${c.title} - CV Trisukses Bangun Karya Sidoarjo Pasuruan`}
               className="w-full h-44 object-cover group-hover:scale-105 transition-transform"
+              width="400"
+              height="240"
+              loading="lazy"
+              decoding="async"
             />
             <div className="p-5">
               <h3 className="font-bold">{c.title}</h3>
@@ -182,7 +186,7 @@ const Jasa = () => {
                   key={it.name}
                   href={it.url}
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 rounded border border-slate-200 hover:border-amber-400 hover:bg-amber-50 transition-colors group"
                 >
                   <span className="w-8 h-8 rounded bg-amber-100 text-amber-600 flex items-center justify-center shrink-0">

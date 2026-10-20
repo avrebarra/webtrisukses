@@ -2,14 +2,38 @@ import React, { useState, useEffect } from "react";
 import { withBasePath } from "../../../utils/withBasePath";
 
 const IMAGES = [
-  { src: withBasePath("/assets/gallery/item_1.jpg"), alt: "Galeri proyek 1" },
-  { src: withBasePath("/assets/gallery/item_2.jpg"), alt: "Galeri proyek 2" },
-  { src: withBasePath("/assets/gallery/item_3.jpg"), alt: "Galeri proyek 3" },
-  { src: withBasePath("/assets/gallery/item_4.jpg"), alt: "Galeri proyek 4" },
-  { src: withBasePath("/assets/gallery/item_5.jpg"), alt: "Galeri proyek 5" },
-  { src: withBasePath("/assets/gallery/item_6.jpg"), alt: "Galeri proyek 6" },
-  { src: withBasePath("/assets/gallery/item_7.jpg"), alt: "Galeri proyek 7" },
-  { src: withBasePath("/assets/gallery/item_8.jpg"), alt: "Galeri proyek 8" },
+  {
+    src: withBasePath("/assets/gallery/item_1.jpg"),
+    alt: "Hasil bangun rumah minimalis Sidoarjo - proyek CV Trisukses Bangun Karya 1",
+  },
+  {
+    src: withBasePath("/assets/gallery/item_2.jpg"),
+    alt: "Hasil renovasi rumah tinggal Pasuruan - proyek CV Trisukses Bangun Karya 2",
+  },
+  {
+    src: withBasePath("/assets/gallery/item_3.jpg"),
+    alt: "Interior ruang tamu modern - proyek CV Trisukses Bangun Karya 3",
+  },
+  {
+    src: withBasePath("/assets/gallery/item_4.jpg"),
+    alt: "Fasad rumah dua lantai - proyek CV Trisukses Bangun Karya 4",
+  },
+  {
+    src: withBasePath("/assets/gallery/item_5.jpg"),
+    alt: "Renovasi dapur dan kitchen set - proyek CV Trisukses Bangun Karya 5",
+  },
+  {
+    src: withBasePath("/assets/gallery/item_6.jpg"),
+    alt: "Pembangunan ruko Sidoarjo - proyek CV Trisukses Bangun Karya 6",
+  },
+  {
+    src: withBasePath("/assets/gallery/item_7.jpg"),
+    alt: "Pagar dan taman minimalis - proyek CV Trisukses Bangun Karya 7",
+  },
+  {
+    src: withBasePath("/assets/gallery/item_8.jpg"),
+    alt: "Plafon dan atap baja ringan - proyek CV Trisukses Bangun Karya 8",
+  },
 ];
 
 const Gallery = () => {
@@ -60,6 +84,10 @@ const Gallery = () => {
                 }}
                 tabIndex={0}
                 className="rounded-md w-full h-44 object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                width="400"
+                height="300"
+                loading="lazy"
+                decoding="async"
               />
             ))}
           </div>
@@ -156,6 +184,9 @@ const Gallery = () => {
             src={IMAGES[active].src}
             alt={IMAGES[active].alt}
             className="w-full sm:w-auto max-w-[92vw] sm:max-w-4xl max-h-[75vh] sm:max-h-[80vh] object-contain rounded-md shadow-2xl"
+            width="800"
+            height="600"
+            decoding="async"
           />
           <p className="text-center text-white/80 text-sm mt-4">{IMAGES[active].alt}</p>
         </div>

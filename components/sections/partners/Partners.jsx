@@ -24,8 +24,12 @@ const Partners = () => {
           >
             <img
               src={src}
-              alt={`Partner ${i + 1}`}
+              alt={`Partner material bangunan ${i + 1} - CV Trisukses Bangun Karya`}
               className="max-h-14 max-w-full object-contain"
+              width="140"
+              height="56"
+              loading="lazy"
+              decoding="async"
               onError={(e) => {
                 e.currentTarget.style.display = "none";
                 e.currentTarget.nextSibling && (e.currentTarget.nextSibling.style.display = "flex");

@@ -16,7 +16,7 @@ const CTA = () => {
         <a
           href={constants.WHATSAPP_MESSAGES.GENERAL}
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 mt-8 bg-slate-900 hover:bg-slate-800 text-white font-semibold px-10 py-4 rounded shadow-lg transition-all"
         >
           <FontAwesomeIcon icon={faWhatsapp} className="w-[18px] h-[18px]" aria-hidden="true" />

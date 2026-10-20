@@ -4,8 +4,8 @@
   "short_name": "Trisukses Bangun Karya",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFFFFF",
-  "theme_color": "#F53838",
+  "background_color": "#ffffff",
+  "theme_color": "#fbbf24",
   "description": "Trisukses Bangun Karya Penyedia jasa bangun pembangunan renovasi bangunan murah Jawa Timur.",
   "icons": [
     {

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-// fixes missing cleanup in Header.jsx — minimal hook, no new dep
+// fixes missing cleanup in Header.jsx - minimal hook, no new dep
 export default function useScrollActive(threshold = 20) {
   const [active, setActive] = useState(false);
   useEffect(() => {

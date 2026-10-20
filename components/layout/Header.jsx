@@ -19,8 +19,12 @@ const Header = () => {
         <a href="#hero" className="flex items-center shrink-0">
           <img
             src={withBasePath("/assets/logo.png")}
-            alt="CV Trisukses Bangun Karya"
+            alt="CV Trisukses Bangun Karya - logo kontraktor Sidoarjo Pasuruan"
             className="h-10 sm:h-12 w-auto object-contain"
+            width="140"
+            height="48"
+            loading="eager"
+            decoding="async"
           />
         </a>
         <ul className="hidden lg:flex items-center gap-1 text-[13px] font-medium text-slate-600">
@@ -35,7 +39,7 @@ const Header = () => {
         <a
           href={constants.WHATSAPP_MESSAGES.GENERAL}
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 bg-amber-400 hover:bg-amber-300 text-slate-900 text-sm font-semibold px-4 sm:px-5 py-2.5 rounded shadow-md shadow-amber-400/30 transition-all whitespace-nowrap"
         >
           <FontAwesomeIcon icon={faWhatsapp} className="w-4 h-4" aria-hidden="true" />
