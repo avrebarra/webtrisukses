@@ -11,7 +11,7 @@ import SEOHead from "../components/layout/SeoHead";
 export default function Home() {
   return (
     <>
-      <SEOHead title="Karya Renovasi - Bangun hunian impian anda bersama kami!" />
+      <SEOHead title="Trisukses Bangun Karya — Jasa Bangun dan Renovasi Rumah" />
       <Layout>
         <Hero />
         <Feature />

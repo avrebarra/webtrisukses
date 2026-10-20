@@ -4,10 +4,14 @@
 @tailwind components;
 
 html {
-  font-family: "Rubik", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+html, body {
+  overflow-x: hidden;
 }
 body {
-  @apply bg-white;
+  @apply bg-white antialiased text-slate-900;
 }
 p {
   @apply text-slate-900;
@@ -27,13 +31,11 @@ p {
 }
 
 li.custom-list:before {
-  content: "\2022"; /* bullet point, for screen readers */
-  text-indent: -9999999px; /* move the bullet point out of sight */
-
+  content: "\2022";
+  text-indent: -9999999px;
   width: 0.4em;
   height: 1em;
   background-repeat: no-repeat;
-
   background-size: 0.4em 0.7em;
   background-position: 0 0.3em;
   font-size: 300%;
@@ -51,7 +53,6 @@ li.check:before {
   top: -0.5em;
   font-size: 400%;
 }
-/* Slideshow */
 .slick-dots li {
   @apply inline-block;
 }
