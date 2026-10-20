@@ -1,12 +1,12 @@
-import React, { useMemo } from "react";
-import ButtonPrimary from "./misc/ButtonPrimary";
+import React from "react";
+import ButtonPrimary from "../../ui/ButtonPrimary";
 import { motion } from "framer-motion";
-import getScrollAnimation from "../utils/getScrollAnimation";
-import * as constants from "../data/constants";
-import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
+import * as constants from "../../../data/constants";
+import useScrollAnimation from "../../../hooks/useScrollAnimation";
+import ScrollAnimationWrapper from "../../ui/ScrollAnimationWrapper";
 
 const CTA = () => {
-  const scrollAnimation = useMemo(() => getScrollAnimation(), []);
+  const scrollAnimation = useScrollAnimation();
 
   return (
     <div className="bg-gradient-to-b from-white-300 to-slate-100 w-full py-14" id="pricing">

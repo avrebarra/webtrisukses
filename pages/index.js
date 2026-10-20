@@ -1,12 +1,12 @@
-import Feature from "../components/2_Feature";
-import CTA from "../components/X_CTA";
-import Jasa from "../components/X_Jasa";
-import Gallery from "../components/3_Gallery";
-import Hero from "../components/1_Hero";
-import Workways from "../components/X_Workways";
-import Partners from "../components/X_Partners";
-import Layout from "../components/Layout/Layout";
-import SEOHead from "../components/SeoHead";
+import Feature from "../components/sections/features/Features";
+import CTA from "../components/sections/cta/Cta";
+import Jasa from "../components/sections/services/Services";
+import Gallery from "../components/sections/gallery/Gallery";
+import Hero from "../components/sections/hero/Hero";
+import Workways from "../components/sections/workways/Workways";
+import Partners from "../components/sections/partners/Partners";
+import Layout from "../components/layout/Layout";
+import SEOHead from "../components/layout/SeoHead";
 
 export default function Home() {
   return (
